@@ -9,6 +9,17 @@ npm run import      # timetable-csv/ のCSV → public/data/ の trips.json な�
 
 取り込み後に自動で入力チェックも行い、問題があれば「どのファイルの何行目か」を表示します。
 
+## 雛形から始める
+
+[`templates/template.csv`](../templates/template.csv) が、書き込み用の雛形です(説明の行つき)。
+
+1. `templates/template.csv` を `timetable-csv/` にコピーし、ファイル名を分かりやすく変えます(例: `A_平日_下り.csv`)。
+2. Excelなどで開き、`#route` `#direction` `#days` と、停留所・時刻を自分の路線に書き換えます。`#memo` の行は説明用なので、消しても残しても構いません。
+3. 平日・土日祝・方向ごとに、1枚ずつ表を作ります(雛形をコピーして増やします)。
+4. `npm run import` で取り込みます。
+
+`timetable-csv/` に最初から入っているCSVは、サンプルのデータです。自分の路線を入れるときは、消してから取り込んでください。
+
 ## 1ファイル = 路線・方向・曜日ごとの1枚の表
 
 `timetable-csv/` に、次のようなCSVを置きます(ファイル名は自由。便のIDはファイル名から自動で付きます)。

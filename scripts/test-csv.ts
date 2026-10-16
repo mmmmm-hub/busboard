@@ -72,6 +72,18 @@ try {
   assert.throws(() => importCsv(badDir, dataDir), (e) => e instanceof ImportError && e.message.includes('b.csv 4行目'));
   writeFileSync(join(badDir, 'b.csv'), lines('#route,A', '停留所,1', '駅前,7:00'), 'utf8');
   assert.throws(() => importCsv(badDir, dataDir), (e) => e instanceof ImportError && e.message.includes('#direction'));
+
+  // 雛形(templates/template.csv)は、そのまま取り込める。説明用の #memo の行は読み取らない
+  const tplDir = join(tmp, 'tpl');
+  mkdirSync(tplDir);
+  cpSync(resolve('templates/template.csv'), join(tplDir, 'template.csv'));
+  const tr = importCsv(tplDir, dataDir);
+  assert.equal(tr.trips, 6);
+  assert.equal(tr.newStops.length + tr.newRoutes.length, 0, '雛形の停留所・路線はサンプルと同じ名前');
+  const tt = readTrips(dataDir);
+  assert.equal(tt.length, 6);
+  assert.equal(tt[0].days, 'weekday');
+  assert.equal(tt[3].times.hospital, undefined, '空欄の便は停まらない');
 } finally {
   rmSync(tmp, { recursive: true, force: true });
 }

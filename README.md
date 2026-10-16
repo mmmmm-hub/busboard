@@ -95,7 +95,7 @@ npm install
 
 #### 3. 時刻表を書く
 
-**Excel / スプレッドシートで書く(おすすめ)**: `timetable-csv/` の表を書き換えます。書き方は [docs/CSV_FORMAT.md](docs/CSV_FORMAT.md)。書き換えたら、取り込みます。
+**Excel / スプレッドシートで書く(おすすめ)**: 雛形 `templates/template.csv` を `timetable-csv/` にコピーして書き換えます(最初から入っているサンプルのCSVは、消してから取り込みます)。書き方は [docs/CSV_FORMAT.md](docs/CSV_FORMAT.md)。書き換えたら、取り込みます。
 
 ```bash
 npm run import
@@ -155,6 +155,7 @@ git push
 
 ```
 timetable-csv/   時刻表の表(ExcelやCSV。npm run import で public/data に取り込む)
+templates/       CSVの雛形(template.csv)
 public/data/     時刻表のデータ(JSON。サイトに表示される)
 examples/        サンプル(sample: 汎用 / chitose: ビビバスの実データ)
 docs/            データ形式とCSV形式の説明
