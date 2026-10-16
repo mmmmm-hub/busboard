@@ -2,6 +2,8 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { availableStops, carryoverHits, clockNote, connects, directionFor, filterByPeriod, filterNow, findTrips, nextOperatingDay, tripRuns } from '../src/lib/logic';
+import { isJapaneseHoliday } from '../src/lib/holidays';
+import { dayType } from '../src/lib/logic';
 import { parseMarkdown, safeHref } from '../src/lib/markdown';
 import type { Route, Site, Stop, TimetableData, Trip } from '../src/types';
 
@@ -146,3 +148,26 @@ const evil = parseMarkdown('[押す](javascript:alert(1)) <script>alert(1)</scri
 assert.ok(evil[0].type === 'paragraph' && !evil[0].lines[0].some((i) => i.type === 'link'), 'あぶないリンクはリンクにしない');
 assert.ok(evil[0].type === 'paragraph' && evil[0].lines[0].some((i) => i.type === 'text' && i.text.includes('<script>')), 'HTMLは文字として残る(動かさない)');
 console.log('markdown ok');
+
+// --- 日本の祝日の自動判定(2026・2025・2020年の、実際の祝日) ---
+const ymdOf = (y: number, m: number, d: number) => isJapaneseHoliday(new Date(y, m - 1, d));
+const holidays2026 = ['1-1', '1-12', '2-11', '2-23', '3-20', '4-29', '5-3', '5-4', '5-5', '5-6', '7-20', '8-11', '9-21', '9-22', '9-23', '10-12', '11-3', '11-23'];
+for (const md of holidays2026) { const [m, d] = md.split('-').map(Number); assert.equal(ymdOf(2026, m, d), true, `2026-${md} は祝日`); }
+assert.equal(ymdOf(2026, 1, 2), false);
+assert.equal(ymdOf(2026, 5, 7), false);
+assert.equal(ymdOf(2026, 11, 24), false);
+assert.equal(ymdOf(2026, 12, 23), false, '12/23 は2019年以降は祝日ではない');
+// 2025年: 2/23(日)の振替が2/24、11/23(日)の振替が11/24、春分3/20、秋分9/23
+for (const md of ['2-24', '3-20', '9-23', '11-24']) { const [m, d] = md.split('-').map(Number); assert.equal(ymdOf(2025, m, d), true, `2025-${md} は祝日`); }
+// 2020年: オリンピックに合わせた海の日(7/23)・スポーツの日(7/24)・山の日(8/10)。10月第2月曜(10/12)は祝日ではない
+for (const md of ['7-23', '7-24', '8-10']) { const [m, d] = md.split('-').map(Number); assert.equal(ymdOf(2020, m, d), true, `2020-${md} は祝日`); }
+assert.equal(ymdOf(2020, 10, 12), false);
+assert.equal(ymdOf(1999, 1, 1), false, '範囲外の年は祝日なし扱い');
+// 休日ダイヤへの反映: 祝日(火曜の11/3)は、サンプルでは休日。nationalHolidays: false なら平日
+assert.equal(dayType(sample.site, new Date(2026, 10, 3)), 'holiday');
+assert.equal(dayType({ ...sample.site, calendar: { ...sample.site.calendar, nationalHolidays: false } }, new Date(2026, 10, 3)), 'weekday');
+// 祝日が土曜でも「休日」(土曜を独立させる設定でも、祝日は休日)
+const satIndep = { ...sample.site, calendar: { ...sample.site.calendar, saturdayAs: 'saturday' as const } };
+assert.equal(dayType(satIndep, new Date(2026, 4, 2)), 'saturday');   // 5/2(土)は祝日ではない
+assert.equal(dayType(satIndep, new Date(2026, 1, 11)), 'holiday');    // 2/11(水)は祝日
+console.log('holidays ok');

@@ -44,6 +44,9 @@ export interface Site {
     /** 土曜の扱い。既定は 'holiday'(日曜・祝日と同じダイヤ)。'saturday' にすると土曜を独立した区分にする */
     saturdayAs?: 'saturday' | 'holiday';
     breaks?: { name: string; from: string; to: string }[];
+    /** 日本の祝日を自動で休日にする(既定 true)。祝日も平日ダイヤで走るバスは false */
+    nationalHolidays?: boolean;
+    /** 祝日のほかに、休日として扱う日(会社独自の休みなど)。YYYY-MM-DD */
     holidays?: string[];
   };
   /** 時刻表タブの列に出す停留所(方向ごと)。省略時は全停留所 */

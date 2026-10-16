@@ -1,6 +1,7 @@
 // 時刻表の判定ロジック。DOMに依存しない純関数(Node・ブラウザ両方で動く)。
 
 import type { DayType, Hit, PeriodMode, Site, Stop, TimetableData, Trip } from '../types';
+import { isJapaneseHoliday } from './holidays';
 
 /** "HH:MM" → 分。"24:10" のような深夜の表記も扱える */
 export function toMin(s: string | undefined): number | null {
@@ -25,7 +26,8 @@ export function isInBreak(site: Site, d: Date) {
 
 export function dayType(site: Site, d: Date): DayType {
   const w = d.getDay();
-  if (w === 0 || (site.calendar?.holidays ?? []).includes(ymd(d))) return 'holiday';
+  // 日曜、日本の祝日(自動)、site.json の holidays に書いた日は「休日」。祝日の自動判定は nationalHolidays: false で止められる
+  if (w === 0 || (site.calendar?.holidays ?? []).includes(ymd(d)) || (site.calendar?.nationalHolidays !== false && isJapaneseHoliday(d))) return 'holiday';
   if (w === 6) return site.calendar?.saturdayAs === 'saturday' ? 'saturday' : 'holiday';
   return 'weekday';
 }
