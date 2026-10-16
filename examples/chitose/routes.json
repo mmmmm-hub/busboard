@@ -1,0 +1,134 @@
+[
+ {
+  "id": "direct",
+  "name": "直通",
+  "color": "blue",
+  "stops": {
+   "to_univ": [
+    "chitose_st",
+    "mori_moto",
+    "koizumi_clinic",
+    "city_hall",
+    "asahi4",
+    "asahi7",
+    "office_arcadia",
+    "univ_research",
+    "univ_main",
+    "rapidas"
+   ],
+   "to_city": [
+    "rapidas",
+    "univ_main",
+    "univ_research",
+    "office_arcadia",
+    "asahi7",
+    "asahi4",
+    "city_hall",
+    "koizumi_clinic",
+    "mori_moto",
+    "chitose_st"
+   ]
+  }
+ },
+ {
+  "id": "airport",
+  "name": "空港経由",
+  "color": "orange",
+  "stops": {
+   "to_univ": [
+    "chitose_st",
+    "mori_moto",
+    "koizumi_clinic",
+    "city_hall",
+    "asahi4",
+    "asahi7",
+    "minami_chitose",
+    "air_cargo",
+    "airport_dom28",
+    "airport_dom1",
+    "airport_intl",
+    "univ_research",
+    "univ_main",
+    "rapidas"
+   ],
+   "to_city": [
+    "rapidas",
+    "univ_main",
+    "univ_research",
+    "airport_dom28",
+    "airport_dom1",
+    "airport_intl",
+    "air_cargo",
+    "minami_chitose",
+    "asahi7",
+    "asahi4",
+    "city_hall",
+    "koizumi_clinic",
+    "mori_moto",
+    "chitose_st"
+   ]
+  }
+ },
+ {
+  "id": "osatsu",
+  "name": "長都",
+  "color": "purple",
+  "stops": {
+   "to_univ": [
+    "osatsu_st",
+    "hokuyou_hs",
+    "chitose_st",
+    "mori_moto",
+    "koizumi_clinic",
+    "city_hall",
+    "asahi4",
+    "asahi7",
+    "minami_chitose",
+    "air_cargo",
+    "airport_dom28",
+    "airport_dom1",
+    "airport_intl",
+    "univ_research",
+    "univ_main",
+    "rapidas"
+   ],
+   "to_city": [
+    "rapidas",
+    "univ_main",
+    "univ_research",
+    "airport_dom28",
+    "airport_dom1",
+    "airport_intl",
+    "air_cargo",
+    "minami_chitose",
+    "asahi7",
+    "asahi4",
+    "city_hall",
+    "koizumi_clinic",
+    "mori_moto",
+    "chitose_st",
+    "hokuyou_hs",
+    "osatsu_st"
+   ]
+  }
+ },
+ {
+  "id": "south",
+  "name": "南千歳",
+  "color": "teal",
+  "stops": {
+   "to_univ": [
+    "minami_chitose_kitaguchi",
+    "univ_research",
+    "univ_main",
+    "rapidas"
+   ],
+   "to_city": [
+    "rapidas",
+    "univ_main",
+    "univ_research",
+    "minami_chitose_kitaguchi"
+   ]
+  }
+ }
+]

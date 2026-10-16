@@ -1,0 +1,104 @@
+{
+ "name": "サンプル大学 シャトルバス",
+ "subtitle": "駅と大学を結ぶシャトルバスの時刻表",
+ "notice": "これはサンプルデータです。実際の運行とは関係ありません。",
+ "arrivalBufferMin": 5,
+ "directions": [
+  {
+   "id": "to_campus",
+   "label": "行き",
+   "sub": "大学へ",
+   "periodMode": "arrive_before_start"
+  },
+  {
+   "id": "to_city",
+   "label": "帰り",
+   "sub": "駅へ",
+   "periodMode": "depart_after_end"
+  }
+ ],
+ "periods": {
+  "enabled": true,
+  "label": "限",
+  "items": [
+   {
+    "id": 1,
+    "start": "09:00",
+    "end": "10:30"
+   },
+   {
+    "id": 2,
+    "start": "10:45",
+    "end": "12:15"
+   },
+   {
+    "id": 3,
+    "start": "13:15",
+    "end": "14:45"
+   },
+   {
+    "id": 4,
+    "start": "15:00",
+    "end": "16:30"
+   },
+   {
+    "id": 5,
+    "start": "16:45",
+    "end": "18:15"
+   },
+   {
+    "id": 6,
+    "start": "18:30",
+    "end": "20:00"
+   },
+   {
+    "id": 7,
+    "start": "20:10",
+    "end": "21:40"
+   }
+  ]
+ },
+ "calendar": {
+  "breaks": [
+   {
+    "name": "夏季休業",
+    "from": "2026-08-01",
+    "to": "2026-09-20"
+   },
+   {
+    "name": "春季休業",
+    "from": "2027-02-10",
+    "to": "2027-03-31"
+   }
+  ],
+  "holidays": [
+   "2026-11-03",
+   "2026-11-23",
+   "2027-01-01"
+  ]
+ },
+ "footer": "",
+ "defaults": {
+  "to_campus": {
+   "from": "station",
+   "to": "main"
+  },
+  "to_city": {
+   "from": "main",
+   "to": "station"
+  }
+ },
+ "notices": [
+  {
+   "date": "2026-10-01",
+   "title": "秋学期のダイヤに変わりました",
+   "body": "10月1日から秋学期のダイヤです。平日は7:00〜21:50、日曜・祝日は9:00〜17:30に運行します。",
+   "important": true
+  },
+  {
+   "date": "2026-09-20",
+   "title": "夏季休業中の運行について",
+   "body": "休業期間中は、一部の便が運休になります。時刻表の「休業期」で確認できます。"
+  }
+ ]
+}

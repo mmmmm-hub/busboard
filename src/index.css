@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+/*
+ * ダークモード
+ *
+ * Tailwind v4 のユーティリティは色を CSS 変数(--color-*)で参照するため、
+ * html.dark で変数を上書きするだけで、既存の全クラス(bg-white 等)が
+ * コンポーネント側の変更なしにダーク配色へ切り替わる。
+ *
+ * 配色の方針(JIS X 8341-3 / WCAG 2.x AA、人間工学への配慮):
+ * - 純黒(#000)は使わない: 明暗差が強すぎるとハレーション(文字のにじみ)や
+ *   眼精疲労の原因になるため、背景は暗い藍灰(#0f172a)、面は #1e293b とする
+ * - 本文テキストは背景に対しコントラスト比 4.5:1 以上(AA)を確保
+ *   (例: 主要文字 #f1f5f9 / 面 #1e293b ≒ 12.6:1、副次文字 #94a3b8 ≒ 4.9:1)
+ * - 純白(#fff)の文字も避け、眩しさを抑えた #f1f5f9 を最上位に使う
+ * - color-scheme: dark によりネイティブUI(日付ピッカー等)もダーク表示にする
+ *
+ * OSの設定がダークなら index.html のスクリプトが html 要素に .dark を付ける。
+ */
+html.dark {
+  color-scheme: dark;
+
+  /* 面(ライトのカード白 → 暗い面) */
+  --color-white: #1e293b;
+
+  /* slate: 明度スケールを反転 */
+  --color-slate-50: #0f172a;   /* ページ背景 */
+  --color-slate-100: #28354b;  /* ホバー面・淡い区切り */
+  --color-slate-200: #334155;  /* 境界線 */
+  --color-slate-300: #46536b;
+  --color-slate-400: #7e8ba1;  /* 補助ラベル */
+  --color-slate-500: #94a3b8;  /* 副次テキスト (4.9:1) */
+  --color-slate-600: #aab8ca;
+  --color-slate-700: #cbd5e1;
+  --color-slate-800: #e2e8f0;
+  --color-slate-900: #f1f5f9;  /* 主要テキスト (12.6:1) */
+  --color-slate-950: #f8fafc;
+
+  /* gray: slate と同じ扱い(一部箇所で使用) */
+  --color-gray-50: #0f172a;
+  --color-gray-100: #28354b;
+  --color-gray-200: #334155;
+  --color-gray-700: #cbd5e1;
+
+  /*
+   * アクセント色: 淡い下地(〜200)は暗い同系色に、濃い文字(600〜)は明るい
+   * 同系色にする。中間濃度の単色ベタ(bg-orange-500 のボタン等)はライトと
+   * 共通のまま使えるため変更しない。
+   */
+
+  /* orange (メインアクセント) */
+  --color-orange-50: #3a2416;
+  --color-orange-100: #4d2e17;
+  --color-orange-200: #7c4a1e;
+  --color-orange-600: #fb923c;
+  --color-orange-700: #fdba74;
+  --color-orange-900: #fed7aa;
+  --color-orange-950: #ffedd5;
+
+  /* amber (注意書き) */
+  --color-amber-50: #3a2a12;
+  --color-amber-100: #4d3814;
+  --color-amber-200: #78500f;
+  --color-amber-600: #fbbf24;
+  --color-amber-700: #fcd34d;
+  --color-amber-800: #fde68a;
+
+  /* blue (直通バッジ等) */
+  --color-blue-50: #172554;
+  --color-blue-200: #1e40af;
+  --color-blue-600: #60a5fa;
+  --color-blue-700: #93c5fd;
+  --color-blue-800: #bfdbfe;
+
+  /* purple (長都バッジ等) */
+  --color-purple-50: #311157;
+  --color-purple-200: #6b21a8;
+  --color-purple-600: #c084fc;
+  --color-purple-700: #d8b4fe;
+
+  /* red (警告) */
+  --color-red-50: #450a0a;
+  --color-red-100: #5c1414;
+  --color-red-200: #7f1d1d;
+  --color-red-600: #f87171;
+  --color-red-900: #fecaca;
+  --color-red-950: #fee2e2;
+
+  /* その他のアクセント文字色 */
+  --color-emerald-50: #06281e;
+  --color-emerald-600: #34d399;
+  --color-sky-50: #082f49;
+  --color-sky-600: #38bdf8;
+  --color-indigo-50: #1e1b4b;
+  --color-indigo-600: #818cf8;
+}
+
+/*
+ * 例外1: 色付きベタ面(会社バッジ・主要ボタン)の上の text-white は、
+ * 変数の再割当てに関係なく本当の白のままにする。
+ */
+html.dark .text-white {
+  color: #ffffff;
+}
+
+/*
+ * 例外2: 文字用に明るくした 600/700 を背景として使っている数箇所は、
+ * ライト時の色を維持する(白文字ボタンのコントラストを守るため)。
+ */
+html.dark :is(.bg-orange-600, .hover\:bg-orange-700:hover) {
+  background-color: #ea580c;
+}
+html.dark .bg-red-600 {
+  background-color: #dc2626;
+}
+
+
+/*
+ * 例外3: 白文字を載せる濃い単色の背景(選択中の時限ボタン・運行会社のバッジ)は、
+ * 文字用に明るくした 700 ではなく、元の濃い色のままにする(コントラストを守るため)。
+ */
+html.dark .bg-blue-700 { background-color: #1d4ed8; }
+html.dark .bg-orange-700 { background-color: #c2410c; }
+html.dark .bg-purple-700 { background-color: #7e22ce; }
+html.dark .bg-teal-700 { background-color: #0f766e; }
+html.dark .bg-green-700 { background-color: #15803d; }
+html.dark .bg-red-700 { background-color: #b91c1c; }
+html.dark .bg-sky-700 { background-color: #0369a1; }
+html.dark .bg-slate-700 { background-color: #334155; }
+
+/*
+ * テーマカラー(開発者向け)
+ * 画面の主な強調色は Tailwind の orange-* です。色を変えたいときは、下のコメントを
+ * 外して値を書き換えます(青にする例)。ダークモード側(html.dark)も同様に
+ * 上の「--color-orange-*」を書き換えてください。バッジの色名は src/lib/palette.ts。
+ *
+ * :root {
+ *   --color-orange-50: #eff6ff;
+ *   --color-orange-100: #dbeafe;
+ *   --color-orange-200: #bfdbfe;
+ *   --color-orange-300: #93c5fd;
+ *   --color-orange-400: #60a5fa;
+ *   --color-orange-500: #3b82f6;
+ *   --color-orange-600: #2563eb;
+ *   --color-orange-700: #1d4ed8;
+ * }
+ */
+
+/*
+ * フォーカスリング: キーボードで操作しているときだけ、どこにフォーカスがあるかを見せる。
+ * 重ねて透明にしている select / date input は、親の focus-within で枠を出している。
+ */
+:where(a, button, [role="button"], [tabindex]):focus-visible {
+  outline: 2px solid var(--color-orange-500);
+  outline-offset: 2px;
+  border-radius: 0.5rem;
+}
+
+/* 横スクロール領域のスクロールバーを隠す */
+@utility scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -1,0 +1,100 @@
+[
+ {
+  "id": "osatsu_st",
+  "name": "長都駅東口"
+ },
+ {
+  "id": "hokuyou_hs",
+  "name": "北陽高校前"
+ },
+ {
+  "id": "chitose_st",
+  "name": "千歳駅前",
+  "platforms": {
+   "airport": "5番",
+   "direct": "4番",
+   "osatsu": "5番"
+  },
+  "shortName": "千歳駅前"
+ },
+ {
+  "id": "mori_moto",
+  "name": "もりもと本店前"
+ },
+ {
+  "id": "koizumi_clinic",
+  "name": "古泉循環器内科クリニック前"
+ },
+ {
+  "id": "city_hall",
+  "name": "市役所前"
+ },
+ {
+  "id": "asahi4",
+  "name": "朝日町4丁目"
+ },
+ {
+  "id": "asahi7",
+  "name": "朝日町7丁目"
+ },
+ {
+  "id": "office_arcadia",
+  "name": "オフィス・アルカディア入口"
+ },
+ {
+  "id": "minami_chitose_or_oa",
+  "name": "南千歳駅／OA入口(どちらでも)",
+  "alias": [
+   "minami_chitose",
+   "minami_chitose_kitaguchi",
+   "office_arcadia"
+  ],
+  "shortName": "南千歳駅/OA"
+ },
+ {
+  "id": "minami_chitose",
+  "name": "南千歳駅",
+  "alias": [
+   "minami_chitose_kitaguchi"
+  ]
+ },
+ {
+  "id": "minami_chitose_kitaguchi",
+  "name": "南千歳駅北口",
+  "hidden": true
+ },
+ {
+  "id": "air_cargo",
+  "name": "エアカーゴ前"
+ },
+ {
+  "id": "airport_dom28",
+  "name": "新千歳空港国内線28番"
+ },
+ {
+  "id": "airport_dom1",
+  "name": "新千歳空港国内線1番"
+ },
+ {
+  "id": "airport_intl",
+  "name": "新千歳空港国際線85番"
+ },
+ {
+  "id": "airport_intl86",
+  "name": "新千歳空港国際線86番"
+ },
+ {
+  "id": "univ_research",
+  "name": "科技大研究棟",
+  "shortName": "研究棟"
+ },
+ {
+  "id": "univ_main",
+  "name": "科技大本部棟",
+  "shortName": "本部棟"
+ },
+ {
+  "id": "rapidas",
+  "name": "ラピダス前"
+ }
+]

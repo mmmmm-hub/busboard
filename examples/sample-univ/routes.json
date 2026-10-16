@@ -1,0 +1,23 @@
+[
+ {
+  "id": "A",
+  "name": "駅・大学線",
+  "color": "blue",
+  "stops": {
+   "to_campus": [
+    "station",
+    "town",
+    "hospital",
+    "gate",
+    "main"
+   ],
+   "to_city": [
+    "main",
+    "gate",
+    "hospital",
+    "town",
+    "station"
+   ]
+  }
+ }
+]

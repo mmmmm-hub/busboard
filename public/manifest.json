@@ -1,0 +1,10 @@
+{
+  "short_name": "バス時刻表",
+  "name": "バス時刻表",
+  "icons": [{ "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }],
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#FCFCFC",
+  "theme_color": "#FF5E1A",
+  "orientation": "portrait"
+}

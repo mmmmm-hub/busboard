@@ -1,0 +1,110 @@
+{
+ "name": "ビビバス",
+ "subtitle": "千歳科学技術大学 美々空港線",
+ "notice": "非公式の時刻表です。運行事業者・大学・千歳市とは関係ありません。",
+ "footer": "© bibi-bus.com",
+ "defaults": {
+  "to_univ": {
+   "from": "chitose_st",
+   "to": "univ_main"
+  },
+  "to_city": {
+   "from": "univ_main",
+   "to": "chitose_st"
+  }
+ },
+ "arrivalBufferMin": 0,
+ "directions": [
+  {
+   "id": "to_univ",
+   "label": "行き",
+   "sub": "大学へ",
+   "periodMode": "arrive_before_start"
+  },
+  {
+   "id": "to_city",
+   "label": "帰り",
+   "sub": "駅へ",
+   "periodMode": "depart_after_end"
+  }
+ ],
+ "operators": {
+  "hokuto": {
+   "name": "北都",
+   "color": "green"
+  },
+  "sogo": {
+   "name": "相互",
+   "color": "red"
+  },
+  "wing": {
+   "name": "ウィング",
+   "color": "sky"
+  },
+  "donan": {
+   "name": "道南",
+   "color": "green"
+  }
+ },
+ "periods": {
+  "enabled": true,
+  "label": "限",
+  "items": [
+   {
+    "id": 1,
+    "start": "09:00",
+    "end": "10:30"
+   },
+   {
+    "id": 2,
+    "start": "10:45",
+    "end": "12:15"
+   },
+   {
+    "id": 3,
+    "start": "13:15",
+    "end": "14:45"
+   },
+   {
+    "id": 4,
+    "start": "15:00",
+    "end": "16:30"
+   },
+   {
+    "id": 5,
+    "start": "16:45",
+    "end": "18:15"
+   }
+  ]
+ },
+ "calendar": {
+  "breaks": [
+   {
+    "name": "夏季学休期",
+    "from": "2026-08-03",
+    "to": "2026-09-25"
+   },
+   {
+    "name": "冬季学休期",
+    "from": "2027-02-01",
+    "to": "2027-03-31"
+   }
+  ],
+  "holidays": []
+ },
+ "timetableColumns": {
+  "to_univ": [
+   "chitose_st",
+   "minami_chitose_or_oa",
+   "univ_research",
+   "univ_main"
+  ],
+  "to_city": [
+   "univ_main",
+   "univ_research",
+   "minami_chitose_or_oa",
+   "chitose_st"
+  ]
+ },
+ "notices": []
+}

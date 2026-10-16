@@ -1,0 +1,23 @@
+[
+ {
+  "id": "station",
+  "name": "駅前"
+ },
+ {
+  "id": "town",
+  "name": "町役場前"
+ },
+ {
+  "id": "hospital",
+  "name": "市立病院前"
+ },
+ {
+  "id": "gate",
+  "name": "大学正門",
+  "shortName": "正門"
+ },
+ {
+  "id": "main",
+  "name": "大学本部棟"
+ }
+]
