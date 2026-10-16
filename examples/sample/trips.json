@@ -1,1326 +1,1326 @@
 [
  {
-  "id": "A_to_campus_holiday-01",
+  "id": "A_down_holiday-01",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "holiday",
   "times": {
    "station": "09:00",
    "town": "09:05",
    "hospital": "09:09",
-   "gate": "09:15",
-   "main": "09:18"
+   "park": "09:15",
+   "depot": "09:18"
   }
  },
  {
-  "id": "A_to_campus_holiday-02",
+  "id": "A_down_holiday-02",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "holiday",
   "times": {
    "station": "10:00",
    "town": "10:05",
    "hospital": "10:09",
-   "gate": "10:15",
-   "main": "10:18"
+   "park": "10:15",
+   "depot": "10:18"
   }
  },
  {
-  "id": "A_to_campus_holiday-03",
+  "id": "A_down_holiday-03",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "holiday",
   "times": {
    "station": "11:00",
    "town": "11:05",
    "hospital": "11:09",
-   "gate": "11:15",
-   "main": "11:18"
+   "park": "11:15",
+   "depot": "11:18"
   }
  },
  {
-  "id": "A_to_campus_holiday-04",
+  "id": "A_down_holiday-04",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "holiday",
   "times": {
    "station": "12:00",
    "town": "12:05",
    "hospital": "12:09",
-   "gate": "12:15",
-   "main": "12:18"
+   "park": "12:15",
+   "depot": "12:18"
   }
  },
  {
-  "id": "A_to_campus_holiday-05",
+  "id": "A_down_holiday-05",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "holiday",
   "times": {
    "station": "13:00",
    "town": "13:05",
    "hospital": "13:09",
-   "gate": "13:15",
-   "main": "13:18"
+   "park": "13:15",
+   "depot": "13:18"
   }
  },
  {
-  "id": "A_to_campus_holiday-06",
+  "id": "A_down_holiday-06",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "holiday",
   "times": {
    "station": "14:00",
    "town": "14:05",
    "hospital": "14:09",
-   "gate": "14:15",
-   "main": "14:18"
+   "park": "14:15",
+   "depot": "14:18"
   }
  },
  {
-  "id": "A_to_campus_holiday-07",
+  "id": "A_down_holiday-07",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "holiday",
   "times": {
    "station": "15:00",
    "town": "15:05",
    "hospital": "15:09",
-   "gate": "15:15",
-   "main": "15:18"
+   "park": "15:15",
+   "depot": "15:18"
   }
  },
  {
-  "id": "A_to_campus_holiday-08",
+  "id": "A_down_holiday-08",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "holiday",
   "times": {
    "station": "16:00",
    "town": "16:05",
    "hospital": "16:09",
-   "gate": "16:15",
-   "main": "16:18"
+   "park": "16:15",
+   "depot": "16:18"
   }
  },
  {
-  "id": "A_to_campus_holiday-09",
+  "id": "A_down_holiday-09",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "holiday",
   "times": {
    "station": "17:00",
    "town": "17:05",
    "hospital": "17:09",
-   "gate": "17:15",
-   "main": "17:18"
+   "park": "17:15",
+   "depot": "17:18"
   }
  },
  {
-  "id": "A_to_campus_weekday-01",
+  "id": "A_down_weekday-01",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "times": {
    "station": "07:00",
    "town": "07:05",
    "hospital": "07:09",
-   "gate": "07:15",
-   "main": "07:18"
+   "park": "07:15",
+   "depot": "07:18"
   }
  },
  {
-  "id": "A_to_campus_weekday-02",
+  "id": "A_down_weekday-02",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "times": {
    "station": "07:40",
    "town": "07:45",
    "hospital": "07:49",
-   "gate": "07:55",
-   "main": "07:58"
+   "park": "07:55",
+   "depot": "07:58"
   }
  },
  {
-  "id": "A_to_campus_weekday-03",
+  "id": "A_down_weekday-03",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "times": {
    "station": "08:20",
    "town": "08:25",
    "hospital": "08:29",
-   "gate": "08:35",
-   "main": "08:38"
+   "park": "08:35",
+   "depot": "08:38"
   }
  },
  {
-  "id": "A_to_campus_weekday-04",
+  "id": "A_down_weekday-04",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "times": {
    "station": "09:00",
    "town": "09:05",
    "hospital": "09:09",
-   "gate": "09:15",
-   "main": "09:18"
+   "park": "09:15",
+   "depot": "09:18"
   }
  },
  {
-  "id": "A_to_campus_weekday-05",
+  "id": "A_down_weekday-05",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "times": {
    "station": "09:40",
    "town": "09:45",
    "hospital": "09:49",
-   "gate": "09:55",
-   "main": "09:58"
+   "park": "09:55",
+   "depot": "09:58"
   }
  },
  {
-  "id": "A_to_campus_weekday-06",
+  "id": "A_down_weekday-06",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "times": {
    "station": "10:20",
    "town": "10:25",
    "hospital": "10:29",
-   "gate": "10:35",
-   "main": "10:38"
+   "park": "10:35",
+   "depot": "10:38"
   }
  },
  {
-  "id": "A_to_campus_weekday-07",
+  "id": "A_down_weekday-07",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "times": {
    "station": "11:00",
    "town": "11:05",
    "hospital": "11:09",
-   "gate": "11:15",
-   "main": "11:18"
+   "park": "11:15",
+   "depot": "11:18"
   }
  },
  {
-  "id": "A_to_campus_weekday-08",
+  "id": "A_down_weekday-08",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "times": {
    "station": "11:40",
    "town": "11:45",
    "hospital": "11:49",
-   "gate": "11:55",
-   "main": "11:58"
+   "park": "11:55",
+   "depot": "11:58"
   }
  },
  {
-  "id": "A_to_campus_weekday-09",
+  "id": "A_down_weekday-09",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "times": {
    "station": "12:20",
    "town": "12:25",
    "hospital": "12:29",
-   "gate": "12:35",
-   "main": "12:38"
+   "park": "12:35",
+   "depot": "12:38"
   }
  },
  {
-  "id": "A_to_campus_weekday-10",
+  "id": "A_down_weekday-10",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "times": {
    "station": "13:00",
    "town": "13:05",
    "hospital": "13:09",
-   "gate": "13:15",
-   "main": "13:18"
+   "park": "13:15",
+   "depot": "13:18"
   }
  },
  {
-  "id": "A_to_campus_weekday-11",
+  "id": "A_down_weekday-11",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "times": {
    "station": "13:40",
    "town": "13:45",
    "hospital": "13:49",
-   "gate": "13:55",
-   "main": "13:58"
+   "park": "13:55",
+   "depot": "13:58"
   }
  },
  {
-  "id": "A_to_campus_weekday-12",
+  "id": "A_down_weekday-12",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "times": {
    "station": "14:20",
    "town": "14:25",
    "hospital": "14:29",
-   "gate": "14:35",
-   "main": "14:38"
+   "park": "14:35",
+   "depot": "14:38"
   }
  },
  {
-  "id": "A_to_campus_weekday-13",
+  "id": "A_down_weekday-13",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "times": {
    "station": "15:00",
    "town": "15:05",
    "hospital": "15:09",
-   "gate": "15:15",
-   "main": "15:18"
+   "park": "15:15",
+   "depot": "15:18"
   }
  },
  {
-  "id": "A_to_campus_weekday-14",
+  "id": "A_down_weekday-14",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "times": {
    "station": "15:40",
    "town": "15:45",
    "hospital": "15:49",
-   "gate": "15:55",
-   "main": "15:58"
+   "park": "15:55",
+   "depot": "15:58"
   }
  },
  {
-  "id": "A_to_campus_weekday-15",
+  "id": "A_down_weekday-15",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "times": {
    "station": "16:20",
    "town": "16:25",
    "hospital": "16:29",
-   "gate": "16:35",
-   "main": "16:38"
+   "park": "16:35",
+   "depot": "16:38"
   }
  },
  {
-  "id": "A_to_campus_weekday-16",
+  "id": "A_down_weekday-16",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "times": {
    "station": "17:00",
    "town": "17:05",
    "hospital": "17:09",
-   "gate": "17:15",
-   "main": "17:18"
+   "park": "17:15",
+   "depot": "17:18"
   }
  },
  {
-  "id": "A_to_campus_weekday-17",
+  "id": "A_down_weekday-17",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "times": {
    "station": "17:40",
    "town": "17:45",
    "hospital": "17:49",
-   "gate": "17:55",
-   "main": "17:58"
+   "park": "17:55",
+   "depot": "17:58"
   }
  },
  {
-  "id": "A_to_campus_weekday-18",
+  "id": "A_down_weekday-18",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "times": {
    "station": "18:20",
    "town": "18:25",
    "hospital": "18:29",
-   "gate": "18:35",
-   "main": "18:38"
+   "park": "18:35",
+   "depot": "18:38"
   }
  },
  {
-  "id": "A_to_campus_weekday-19",
+  "id": "A_down_weekday-19",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "times": {
    "station": "19:00",
    "town": "19:05",
    "hospital": "19:09",
-   "gate": "19:15",
-   "main": "19:18"
+   "park": "19:15",
+   "depot": "19:18"
   }
  },
  {
-  "id": "A_to_campus_weekday-20",
+  "id": "A_down_weekday-20",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "times": {
    "station": "19:40",
    "town": "19:45",
    "hospital": "19:49",
-   "gate": "19:55",
-   "main": "19:58"
+   "park": "19:55",
+   "depot": "19:58"
   }
  },
  {
-  "id": "A_to_campus_weekday_suspend-01",
+  "id": "A_down_weekday_suspend-01",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
    "station": "07:20",
    "town": "07:25",
    "hospital": "07:29",
-   "gate": "07:35",
-   "main": "07:38"
+   "park": "07:35",
+   "depot": "07:38"
   }
  },
  {
-  "id": "A_to_campus_weekday_suspend-02",
+  "id": "A_down_weekday_suspend-02",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
    "station": "08:00",
    "town": "08:05",
    "hospital": "08:09",
-   "gate": "08:15",
-   "main": "08:18"
+   "park": "08:15",
+   "depot": "08:18"
   }
  },
  {
-  "id": "A_to_campus_weekday_suspend-03",
+  "id": "A_down_weekday_suspend-03",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
    "station": "08:40",
    "town": "08:45",
    "hospital": "08:49",
-   "gate": "08:55",
-   "main": "08:58"
+   "park": "08:55",
+   "depot": "08:58"
   }
  },
  {
-  "id": "A_to_campus_weekday_suspend-04",
+  "id": "A_down_weekday_suspend-04",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
    "station": "09:20",
    "town": "09:25",
    "hospital": "09:29",
-   "gate": "09:35",
-   "main": "09:38"
+   "park": "09:35",
+   "depot": "09:38"
   }
  },
  {
-  "id": "A_to_campus_weekday_suspend-05",
+  "id": "A_down_weekday_suspend-05",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
    "station": "10:00",
    "town": "10:05",
    "hospital": "10:09",
-   "gate": "10:15",
-   "main": "10:18"
+   "park": "10:15",
+   "depot": "10:18"
   }
  },
  {
-  "id": "A_to_campus_weekday_suspend-06",
+  "id": "A_down_weekday_suspend-06",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
    "station": "10:40",
    "town": "10:45",
    "hospital": "10:49",
-   "gate": "10:55",
-   "main": "10:58"
+   "park": "10:55",
+   "depot": "10:58"
   }
  },
  {
-  "id": "A_to_campus_weekday_suspend-07",
+  "id": "A_down_weekday_suspend-07",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
    "station": "11:20",
    "town": "11:25",
    "hospital": "11:29",
-   "gate": "11:35",
-   "main": "11:38"
+   "park": "11:35",
+   "depot": "11:38"
   }
  },
  {
-  "id": "A_to_campus_weekday_suspend-08",
+  "id": "A_down_weekday_suspend-08",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
    "station": "12:00",
    "town": "12:05",
    "hospital": "12:09",
-   "gate": "12:15",
-   "main": "12:18"
+   "park": "12:15",
+   "depot": "12:18"
   }
  },
  {
-  "id": "A_to_campus_weekday_suspend-09",
+  "id": "A_down_weekday_suspend-09",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
    "station": "12:40",
    "town": "12:45",
    "hospital": "12:49",
-   "gate": "12:55",
-   "main": "12:58"
+   "park": "12:55",
+   "depot": "12:58"
   }
  },
  {
-  "id": "A_to_campus_weekday_suspend-10",
+  "id": "A_down_weekday_suspend-10",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
    "station": "13:20",
    "town": "13:25",
    "hospital": "13:29",
-   "gate": "13:35",
-   "main": "13:38"
+   "park": "13:35",
+   "depot": "13:38"
   }
  },
  {
-  "id": "A_to_campus_weekday_suspend-11",
+  "id": "A_down_weekday_suspend-11",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
    "station": "14:00",
    "town": "14:05",
    "hospital": "14:09",
-   "gate": "14:15",
-   "main": "14:18"
+   "park": "14:15",
+   "depot": "14:18"
   }
  },
  {
-  "id": "A_to_campus_weekday_suspend-12",
+  "id": "A_down_weekday_suspend-12",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
    "station": "14:40",
    "town": "14:45",
    "hospital": "14:49",
-   "gate": "14:55",
-   "main": "14:58"
+   "park": "14:55",
+   "depot": "14:58"
   }
  },
  {
-  "id": "A_to_campus_weekday_suspend-13",
+  "id": "A_down_weekday_suspend-13",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
    "station": "15:20",
    "town": "15:25",
    "hospital": "15:29",
-   "gate": "15:35",
-   "main": "15:38"
+   "park": "15:35",
+   "depot": "15:38"
   }
  },
  {
-  "id": "A_to_campus_weekday_suspend-14",
+  "id": "A_down_weekday_suspend-14",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
    "station": "16:00",
    "town": "16:05",
    "hospital": "16:09",
-   "gate": "16:15",
-   "main": "16:18"
+   "park": "16:15",
+   "depot": "16:18"
   }
  },
  {
-  "id": "A_to_campus_weekday_suspend-15",
+  "id": "A_down_weekday_suspend-15",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
    "station": "16:40",
    "town": "16:45",
    "hospital": "16:49",
-   "gate": "16:55",
-   "main": "16:58"
+   "park": "16:55",
+   "depot": "16:58"
   }
  },
  {
-  "id": "A_to_campus_weekday_suspend-16",
+  "id": "A_down_weekday_suspend-16",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
    "station": "17:20",
    "town": "17:25",
    "hospital": "17:29",
-   "gate": "17:35",
-   "main": "17:38"
+   "park": "17:35",
+   "depot": "17:38"
   }
  },
  {
-  "id": "A_to_campus_weekday_suspend-17",
+  "id": "A_down_weekday_suspend-17",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
    "station": "18:00",
    "town": "18:05",
    "hospital": "18:09",
-   "gate": "18:15",
-   "main": "18:18"
+   "park": "18:15",
+   "depot": "18:18"
   }
  },
  {
-  "id": "A_to_campus_weekday_suspend-18",
+  "id": "A_down_weekday_suspend-18",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
    "station": "18:40",
    "town": "18:45",
    "hospital": "18:49",
-   "gate": "18:55",
-   "main": "18:58"
+   "park": "18:55",
+   "depot": "18:58"
   }
  },
  {
-  "id": "A_to_campus_weekday_suspend-19",
+  "id": "A_down_weekday_suspend-19",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
    "station": "19:20",
    "town": "19:25",
    "hospital": "19:29",
-   "gate": "19:35",
-   "main": "19:38"
+   "park": "19:35",
+   "depot": "19:38"
   }
  },
  {
-  "id": "A_to_city_holiday-01",
+  "id": "A_up_holiday-01",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "holiday",
   "times": {
-   "main": "09:30",
-   "gate": "09:33",
+   "depot": "09:30",
+   "park": "09:33",
    "hospital": "09:39",
    "town": "09:43",
    "station": "09:48"
   }
  },
  {
-  "id": "A_to_city_holiday-02",
+  "id": "A_up_holiday-02",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "holiday",
   "times": {
-   "main": "10:30",
-   "gate": "10:33",
+   "depot": "10:30",
+   "park": "10:33",
    "hospital": "10:39",
    "town": "10:43",
    "station": "10:48"
   }
  },
  {
-  "id": "A_to_city_holiday-03",
+  "id": "A_up_holiday-03",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "holiday",
   "times": {
-   "main": "11:30",
-   "gate": "11:33",
+   "depot": "11:30",
+   "park": "11:33",
    "hospital": "11:39",
    "town": "11:43",
    "station": "11:48"
   }
  },
  {
-  "id": "A_to_city_holiday-04",
+  "id": "A_up_holiday-04",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "holiday",
   "times": {
-   "main": "12:30",
-   "gate": "12:33",
+   "depot": "12:30",
+   "park": "12:33",
    "hospital": "12:39",
    "town": "12:43",
    "station": "12:48"
   }
  },
  {
-  "id": "A_to_city_holiday-05",
+  "id": "A_up_holiday-05",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "holiday",
   "times": {
-   "main": "13:30",
-   "gate": "13:33",
+   "depot": "13:30",
+   "park": "13:33",
    "hospital": "13:39",
    "town": "13:43",
    "station": "13:48"
   }
  },
  {
-  "id": "A_to_city_holiday-06",
+  "id": "A_up_holiday-06",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "holiday",
   "times": {
-   "main": "14:30",
-   "gate": "14:33",
+   "depot": "14:30",
+   "park": "14:33",
    "hospital": "14:39",
    "town": "14:43",
    "station": "14:48"
   }
  },
  {
-  "id": "A_to_city_holiday-07",
+  "id": "A_up_holiday-07",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "holiday",
   "times": {
-   "main": "15:30",
-   "gate": "15:33",
+   "depot": "15:30",
+   "park": "15:33",
    "hospital": "15:39",
    "town": "15:43",
    "station": "15:48"
   }
  },
  {
-  "id": "A_to_city_holiday-08",
+  "id": "A_up_holiday-08",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "holiday",
   "times": {
-   "main": "16:30",
-   "gate": "16:33",
+   "depot": "16:30",
+   "park": "16:33",
    "hospital": "16:39",
    "town": "16:43",
    "station": "16:48"
   }
  },
  {
-  "id": "A_to_city_holiday-09",
+  "id": "A_up_holiday-09",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "holiday",
   "times": {
-   "main": "17:30",
-   "gate": "17:33",
+   "depot": "17:30",
+   "park": "17:33",
    "hospital": "17:39",
    "town": "17:43",
    "station": "17:48"
   }
  },
  {
-  "id": "A_to_city_weekday-01",
+  "id": "A_up_weekday-01",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "times": {
-   "main": "08:10",
-   "gate": "08:13",
+   "depot": "08:10",
+   "park": "08:13",
    "hospital": "08:19",
    "town": "08:23",
    "station": "08:28"
   }
  },
  {
-  "id": "A_to_city_weekday-02",
+  "id": "A_up_weekday-02",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "times": {
-   "main": "08:50",
-   "gate": "08:53",
+   "depot": "08:50",
+   "park": "08:53",
    "hospital": "08:59",
    "town": "09:03",
    "station": "09:08"
   }
  },
  {
-  "id": "A_to_city_weekday-03",
+  "id": "A_up_weekday-03",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "times": {
-   "main": "09:30",
-   "gate": "09:33",
+   "depot": "09:30",
+   "park": "09:33",
    "hospital": "09:39",
    "town": "09:43",
    "station": "09:48"
   }
  },
  {
-  "id": "A_to_city_weekday-04",
+  "id": "A_up_weekday-04",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "times": {
-   "main": "10:10",
-   "gate": "10:13",
+   "depot": "10:10",
+   "park": "10:13",
    "hospital": "10:19",
    "town": "10:23",
    "station": "10:28"
   }
  },
  {
-  "id": "A_to_city_weekday-05",
+  "id": "A_up_weekday-05",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "times": {
-   "main": "10:50",
-   "gate": "10:53",
+   "depot": "10:50",
+   "park": "10:53",
    "hospital": "10:59",
    "town": "11:03",
    "station": "11:08"
   }
  },
  {
-  "id": "A_to_city_weekday-06",
+  "id": "A_up_weekday-06",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "times": {
-   "main": "11:30",
-   "gate": "11:33",
+   "depot": "11:30",
+   "park": "11:33",
    "hospital": "11:39",
    "town": "11:43",
    "station": "11:48"
   }
  },
  {
-  "id": "A_to_city_weekday-07",
+  "id": "A_up_weekday-07",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "times": {
-   "main": "12:10",
-   "gate": "12:13",
+   "depot": "12:10",
+   "park": "12:13",
    "hospital": "12:19",
    "town": "12:23",
    "station": "12:28"
   }
  },
  {
-  "id": "A_to_city_weekday-08",
+  "id": "A_up_weekday-08",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "times": {
-   "main": "12:50",
-   "gate": "12:53",
+   "depot": "12:50",
+   "park": "12:53",
    "hospital": "12:59",
    "town": "13:03",
    "station": "13:08"
   }
  },
  {
-  "id": "A_to_city_weekday-09",
+  "id": "A_up_weekday-09",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "times": {
-   "main": "13:30",
-   "gate": "13:33",
+   "depot": "13:30",
+   "park": "13:33",
    "hospital": "13:39",
    "town": "13:43",
    "station": "13:48"
   }
  },
  {
-  "id": "A_to_city_weekday-10",
+  "id": "A_up_weekday-10",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "times": {
-   "main": "14:10",
-   "gate": "14:13",
+   "depot": "14:10",
+   "park": "14:13",
    "hospital": "14:19",
    "town": "14:23",
    "station": "14:28"
   }
  },
  {
-  "id": "A_to_city_weekday-11",
+  "id": "A_up_weekday-11",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "times": {
-   "main": "14:50",
-   "gate": "14:53",
+   "depot": "14:50",
+   "park": "14:53",
    "hospital": "14:59",
    "town": "15:03",
    "station": "15:08"
   }
  },
  {
-  "id": "A_to_city_weekday-12",
+  "id": "A_up_weekday-12",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "times": {
-   "main": "15:30",
-   "gate": "15:33",
+   "depot": "15:30",
+   "park": "15:33",
    "hospital": "15:39",
    "town": "15:43",
    "station": "15:48"
   }
  },
  {
-  "id": "A_to_city_weekday-13",
+  "id": "A_up_weekday-13",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "times": {
-   "main": "16:10",
-   "gate": "16:13",
+   "depot": "16:10",
+   "park": "16:13",
    "hospital": "16:19",
    "town": "16:23",
    "station": "16:28"
   }
  },
  {
-  "id": "A_to_city_weekday-14",
+  "id": "A_up_weekday-14",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "times": {
-   "main": "16:50",
-   "gate": "16:53",
+   "depot": "16:50",
+   "park": "16:53",
    "hospital": "16:59",
    "town": "17:03",
    "station": "17:08"
   }
  },
  {
-  "id": "A_to_city_weekday-15",
+  "id": "A_up_weekday-15",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "times": {
-   "main": "17:30",
-   "gate": "17:33",
+   "depot": "17:30",
+   "park": "17:33",
    "hospital": "17:39",
    "town": "17:43",
    "station": "17:48"
   }
  },
  {
-  "id": "A_to_city_weekday-16",
+  "id": "A_up_weekday-16",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "times": {
-   "main": "18:10",
-   "gate": "18:13",
+   "depot": "18:10",
+   "park": "18:13",
    "hospital": "18:19",
    "town": "18:23",
    "station": "18:28"
   }
  },
  {
-  "id": "A_to_city_weekday-17",
+  "id": "A_up_weekday-17",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "times": {
-   "main": "18:50",
-   "gate": "18:53",
+   "depot": "18:50",
+   "park": "18:53",
    "hospital": "18:59",
    "town": "19:03",
    "station": "19:08"
   }
  },
  {
-  "id": "A_to_city_weekday-18",
+  "id": "A_up_weekday-18",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "times": {
-   "main": "19:30",
-   "gate": "19:33",
+   "depot": "19:30",
+   "park": "19:33",
    "hospital": "19:39",
    "town": "19:43",
    "station": "19:48"
   }
  },
  {
-  "id": "A_to_city_weekday-19",
+  "id": "A_up_weekday-19",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "times": {
-   "main": "20:10",
-   "gate": "20:13",
+   "depot": "20:10",
+   "park": "20:13",
    "hospital": "20:19",
    "town": "20:23",
    "station": "20:28"
   }
  },
  {
-  "id": "A_to_city_weekday-20",
+  "id": "A_up_weekday-20",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "times": {
-   "main": "20:50",
-   "gate": "20:53",
+   "depot": "20:50",
+   "park": "20:53",
    "hospital": "20:59",
    "town": "21:03",
    "station": "21:08"
   }
  },
  {
-  "id": "A_to_city_weekday-21",
+  "id": "A_up_weekday-21",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "times": {
-   "main": "21:30",
-   "gate": "21:33",
+   "depot": "21:30",
+   "park": "21:33",
    "hospital": "21:39",
    "town": "21:43",
    "station": "21:48"
   }
  },
  {
-  "id": "A_to_city_weekday_suspend-01",
+  "id": "A_up_weekday_suspend-01",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
-   "main": "08:30",
-   "gate": "08:33",
+   "depot": "08:30",
+   "park": "08:33",
    "hospital": "08:39",
    "town": "08:43",
    "station": "08:48"
   }
  },
  {
-  "id": "A_to_city_weekday_suspend-02",
+  "id": "A_up_weekday_suspend-02",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
-   "main": "09:10",
-   "gate": "09:13",
+   "depot": "09:10",
+   "park": "09:13",
    "hospital": "09:19",
    "town": "09:23",
    "station": "09:28"
   }
  },
  {
-  "id": "A_to_city_weekday_suspend-03",
+  "id": "A_up_weekday_suspend-03",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
-   "main": "09:50",
-   "gate": "09:53",
+   "depot": "09:50",
+   "park": "09:53",
    "hospital": "09:59",
    "town": "10:03",
    "station": "10:08"
   }
  },
  {
-  "id": "A_to_city_weekday_suspend-04",
+  "id": "A_up_weekday_suspend-04",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
-   "main": "10:30",
-   "gate": "10:33",
+   "depot": "10:30",
+   "park": "10:33",
    "hospital": "10:39",
    "town": "10:43",
    "station": "10:48"
   }
  },
  {
-  "id": "A_to_city_weekday_suspend-05",
+  "id": "A_up_weekday_suspend-05",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
-   "main": "11:10",
-   "gate": "11:13",
+   "depot": "11:10",
+   "park": "11:13",
    "hospital": "11:19",
    "town": "11:23",
    "station": "11:28"
   }
  },
  {
-  "id": "A_to_city_weekday_suspend-06",
+  "id": "A_up_weekday_suspend-06",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
-   "main": "11:50",
-   "gate": "11:53",
+   "depot": "11:50",
+   "park": "11:53",
    "hospital": "11:59",
    "town": "12:03",
    "station": "12:08"
   }
  },
  {
-  "id": "A_to_city_weekday_suspend-07",
+  "id": "A_up_weekday_suspend-07",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
-   "main": "12:30",
-   "gate": "12:33",
+   "depot": "12:30",
+   "park": "12:33",
    "hospital": "12:39",
    "town": "12:43",
    "station": "12:48"
   }
  },
  {
-  "id": "A_to_city_weekday_suspend-08",
+  "id": "A_up_weekday_suspend-08",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
-   "main": "13:10",
-   "gate": "13:13",
+   "depot": "13:10",
+   "park": "13:13",
    "hospital": "13:19",
    "town": "13:23",
    "station": "13:28"
   }
  },
  {
-  "id": "A_to_city_weekday_suspend-09",
+  "id": "A_up_weekday_suspend-09",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
-   "main": "13:50",
-   "gate": "13:53",
+   "depot": "13:50",
+   "park": "13:53",
    "hospital": "13:59",
    "town": "14:03",
    "station": "14:08"
   }
  },
  {
-  "id": "A_to_city_weekday_suspend-10",
+  "id": "A_up_weekday_suspend-10",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
-   "main": "14:30",
-   "gate": "14:33",
+   "depot": "14:30",
+   "park": "14:33",
    "hospital": "14:39",
    "town": "14:43",
    "station": "14:48"
   }
  },
  {
-  "id": "A_to_city_weekday_suspend-11",
+  "id": "A_up_weekday_suspend-11",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
-   "main": "15:10",
-   "gate": "15:13",
+   "depot": "15:10",
+   "park": "15:13",
    "hospital": "15:19",
    "town": "15:23",
    "station": "15:28"
   }
  },
  {
-  "id": "A_to_city_weekday_suspend-12",
+  "id": "A_up_weekday_suspend-12",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
-   "main": "15:50",
-   "gate": "15:53",
+   "depot": "15:50",
+   "park": "15:53",
    "hospital": "15:59",
    "town": "16:03",
    "station": "16:08"
   }
  },
  {
-  "id": "A_to_city_weekday_suspend-13",
+  "id": "A_up_weekday_suspend-13",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
-   "main": "16:30",
-   "gate": "16:33",
+   "depot": "16:30",
+   "park": "16:33",
    "hospital": "16:39",
    "town": "16:43",
    "station": "16:48"
   }
  },
  {
-  "id": "A_to_city_weekday_suspend-14",
+  "id": "A_up_weekday_suspend-14",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
-   "main": "17:10",
-   "gate": "17:13",
+   "depot": "17:10",
+   "park": "17:13",
    "hospital": "17:19",
    "town": "17:23",
    "station": "17:28"
   }
  },
  {
-  "id": "A_to_city_weekday_suspend-15",
+  "id": "A_up_weekday_suspend-15",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
-   "main": "17:50",
-   "gate": "17:53",
+   "depot": "17:50",
+   "park": "17:53",
    "hospital": "17:59",
    "town": "18:03",
    "station": "18:08"
   }
  },
  {
-  "id": "A_to_city_weekday_suspend-16",
+  "id": "A_up_weekday_suspend-16",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
-   "main": "18:30",
-   "gate": "18:33",
+   "depot": "18:30",
+   "park": "18:33",
    "hospital": "18:39",
    "town": "18:43",
    "station": "18:48"
   }
  },
  {
-  "id": "A_to_city_weekday_suspend-17",
+  "id": "A_up_weekday_suspend-17",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
-   "main": "19:10",
-   "gate": "19:13",
+   "depot": "19:10",
+   "park": "19:13",
    "hospital": "19:19",
    "town": "19:23",
    "station": "19:28"
   }
  },
  {
-  "id": "A_to_city_weekday_suspend-18",
+  "id": "A_up_weekday_suspend-18",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
-   "main": "19:50",
-   "gate": "19:53",
+   "depot": "19:50",
+   "park": "19:53",
    "hospital": "19:59",
    "town": "20:03",
    "station": "20:08"
   }
  },
  {
-  "id": "A_to_city_weekday_suspend-19",
+  "id": "A_up_weekday_suspend-19",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
-   "main": "20:30",
-   "gate": "20:33",
+   "depot": "20:30",
+   "park": "20:33",
    "hospital": "20:39",
    "town": "20:43",
    "station": "20:48"
   }
  },
  {
-  "id": "A_to_city_weekday_suspend-20",
+  "id": "A_up_weekday_suspend-20",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
-   "main": "21:10",
-   "gate": "21:13",
+   "depot": "21:10",
+   "park": "21:13",
    "hospital": "21:19",
    "town": "21:23",
    "station": "21:28"
   }
  },
  {
-  "id": "A_to_city_weekday_suspend-21",
+  "id": "A_up_weekday_suspend-21",
   "route": "A",
-  "direction": "to_city",
+  "direction": "up",
   "days": "weekday",
   "breaks": "suspend",
   "times": {
-   "main": "21:50",
-   "gate": "21:53",
+   "depot": "21:50",
+   "park": "21:53",
    "hospital": "21:59",
    "town": "22:03",
    "station": "22:08"

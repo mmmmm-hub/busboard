@@ -15,14 +15,14 @@ npm run import      # timetable-csv/ のCSV → public/data/ の trips.json な�
 
 ```
 #route,A
-#direction,to_campus
+#direction,down
 #days,weekday
 停留所,1,2,3
 駅前,07:00,07:40,08:20
 町役場前,07:05,07:45,08:25
 市立病院前,07:09,07:49,
-大学正門,07:15,07:55,08:35
-大学本部棟,07:18,07:58,08:38
+中央公園前,07:15,07:55,08:35
+営業所前,07:18,07:58,08:38
 ```
 
 - **行 = 停留所、列 = 便**です。上から下が停車する順になります。
@@ -35,7 +35,7 @@ npm run import      # timetable-csv/ のCSV → public/data/ の trips.json な�
 | 行 | 内容 | 例 |
 |---|---|---|
 | `#route` | 路線(`routes.json` のIDまたは名前) | `#route,A` |
-| `#direction` | 方向(`site.json` の方向のIDまたは「行き」などの名前) | `#direction,to_campus` / `#direction,行き` |
+| `#direction` | 方向(`site.json` の方向のIDまたは「下り」などの名前) | `#direction,down` / `#direction,下り` |
 | `#days` | `平日` / `土日祝` / `毎日`(土曜を分けるなら `土曜`)。省略は毎日 | `#days,平日` |
 | `#breaks` | 休業期間中の扱い: `通常` / `運休` / `休業中のみ`。省略は通常 | `#breaks,運休` |
 | `#from` / `#until` | この日以降 / この日までだけ運行(ダイヤ改正用) | `#from,2026-10-01` |
@@ -48,7 +48,7 @@ npm run import      # timetable-csv/ のCSV → public/data/ の trips.json な�
 
 ```
 #route,A
-#direction,to_campus
+#direction,down
 @operator,hokuto,sogo,hokuto
 @label,,臨時,
 停留所,1,2,3

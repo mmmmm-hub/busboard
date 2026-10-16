@@ -12,12 +12,13 @@
   "name": "市立病院前"
  },
  {
-  "id": "gate",
-  "name": "大学正門",
-  "shortName": "正門"
+  "id": "park",
+  "name": "中央公園前",
+  "shortName": "公園前"
  },
  {
-  "id": "main",
-  "name": "大学本部棟"
+  "id": "depot",
+  "name": "営業所前",
+  "shortName": "営業所"
  }
 ]

@@ -159,7 +159,7 @@ export default function Home() {
   const minutesLeft = (h: Hit) => h.dep - (carrySet.has(h) ? nowMin + 1440 : nowMin);
   const countdown = (m: number) => (m <= 0 ? 'まもなく' : m < 60 ? `あと${m}分` : `あと${Math.floor(m / 60)}時間${m % 60}分`);
 
-  // スクリーンリーダー用の読み上げ: 「07:00発 07:18着 駅・大学線。停車するバス停を表示」
+  // スクリーンリーダー用の読み上げ: 「07:00発 07:18着 駅・営業所線。停車するバス停を表示」
   const tripLabel = (h: Hit) =>
     `${h.times[h.fromId]}発 ${h.times[h.toId]}着${data.routes.length > 1 ? ' ' + h.route.name : ''}。停車するバス停を表示`;
 

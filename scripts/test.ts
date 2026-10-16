@@ -8,9 +8,9 @@ const dir = resolve(process.argv[2] ?? 'examples/chitose');
 const L = <T>(f: string): T => JSON.parse(readFileSync(resolve(dir, f), 'utf8'));
 const data: TimetableData = { site: L<Site>('site.json'), stops: L<Stop[]>('stops.json'), routes: L<Route[]>('routes.json'), trips: L<Trip[]>('trips.json') };
 
-const wd = new Date(2026, 10, 18);   // 水曜(授業期)
+const wd = new Date(2026, 10, 18);   // 水曜(通常期)
 const sun = new Date(2026, 10, 22);  // 日曜
-const brk = new Date(2026, 7, 12);   // 夏季学休期の水曜
+const brk = new Date(2026, 7, 12);   // 夏季の休業期の水曜
 
 // 平日: 千歳駅前→本部棟は行き方向の便がある
 const up = findTrips(data, wd, 'chitose_st', 'univ_main', 'to_univ');
@@ -31,7 +31,7 @@ assert.ok(p5[0].dep <= p5[p5.length - 1].dep, '早い順');
 // 現在時刻以降のフィルタ
 assert.ok(filterNow(up, 8 * 60).every((h) => h.dep >= 8 * 60));
 
-// 休業期: 授業期のみの便(breaks:suspend)は走らず、休業期専用便(only)が走る
+// 休業期: 通常期のみの便(breaks:suspend)は走らず、休業期専用便(only)が走る
 const suspended = data.trips.find((t) => t.breaks === 'suspend' && t.days === 'weekday' && !t.until && !t.from);
 if (suspended) {
   assert.equal(tripRuns(data.site, suspended, wd), true);
@@ -70,19 +70,19 @@ assert.ok(connects(data, 'chitose_st', 'univ_main'));
 assert.ok(!connects(data, 'univ_main', 'chitose_st', 'to_univ'), '方向が逆の区間は結ばれていない');
 assert.ok(!connects(data, 'univ_main', 'univ_main'));
 
-// --- sample-univ(7限まである汎用サンプル) ---
-const S = <T>(f: string): T => JSON.parse(readFileSync(resolve('examples/sample-univ', f), 'utf8'));
+// --- sample(時限が7つある汎用サンプル) ---
+const S = <T>(f: string): T => JSON.parse(readFileSync(resolve('examples/sample', f), 'utf8'));
 const sample: TimetableData = { site: S<Site>('site.json'), stops: S<Stop[]>('stops.json'), routes: S<Route[]>('routes.json'), trips: S<Trip[]>('trips.json') };
 const sWd = new Date(2026, 10, 18);
-const back = findTrips(sample, sWd, 'main', 'station', 'to_city');
-const p7 = filterByPeriod(sample.site, back, 'to_city', '7');
+const back = findTrips(sample, sWd, 'depot', 'station', 'up');
+const p7 = filterByPeriod(sample.site, back, 'up', '7');
 assert.ok(p7.length > 0 && p7.every((h) => h.dep >= 21 * 60 + 40 + (sample.site.arrivalBufferMin ?? 0)), '7限終了後に乗れる便がある');
 const sSat = new Date(2026, 10, 21);
-assert.ok(findTrips(sample, sSat, 'station', 'main').length > 0, '土曜は既定で休日ダイヤ');
-assert.equal(findTrips(sample, sSat, 'station', 'main').length, findTrips(sample, new Date(2026, 10, 22), 'station', 'main').length);
+assert.ok(findTrips(sample, sSat, 'station', 'depot').length > 0, '土曜は既定で休日ダイヤ');
+assert.equal(findTrips(sample, sSat, 'station', 'depot').length, findTrips(sample, new Date(2026, 10, 22), 'station', 'depot').length);
 const indep: TimetableData = { ...sample, site: { ...sample.site, calendar: { ...sample.site.calendar, saturdayAs: 'saturday' } } };
-assert.equal(findTrips(indep, sSat, 'station', 'main').length, 0, 'saturdayAs: saturday なら土曜は独立(休日便は走らない)');
-const nextDay = nextOperatingDay(sample, new Date(2026, 10, 22), 'station', 'main', 'to_campus');
+assert.equal(findTrips(indep, sSat, 'station', 'depot').length, 0, 'saturdayAs: saturday なら土曜は独立(休日便は走らない)');
+const nextDay = nextOperatingDay(sample, new Date(2026, 10, 22), 'station', 'depot', 'down');
 // 11/23(月)はサンプルの祝日なので、休日ダイヤの始発(09:00)
 assert.ok(nextDay && nextDay.date.getDate() === 23 && nextDay.hit.times.station === '09:00', '翌運行日の始発');
 console.log('sample ok');
@@ -98,7 +98,7 @@ const fresh = (name: string, patch?: (files: Record<string, string>) => void) =>
   const d = join(vtmp, name);
   mkdirSync(d);
   const files: Record<string, string> = {};
-  for (const f of ['site.json', 'stops.json', 'routes.json', 'trips.json']) files[f] = readFileSync(resolve('examples/sample-univ', f), 'utf8');
+  for (const f of ['site.json', 'stops.json', 'routes.json', 'trips.json']) files[f] = readFileSync(resolve('examples/sample', f), 'utf8');
   patch?.(files);
   for (const [f, text] of Object.entries(files)) writeFileSync(join(d, f), text, 'utf8');
   return d;
@@ -113,7 +113,7 @@ try {
   assert.ok(noDir.some((e) => e.includes('directions')), '必須項目の欠けで落ちない');
   const missing = validateDir(join(vtmp, 'nothing'));
   assert.ok(missing.some((e) => e.includes('見つかりません')));
-  const noTimes = validateDir(fresh('notimes', (f) => { f['trips.json'] = '[{"id":"x","route":"A","direction":"to_campus"}]'; }));
+  const noTimes = validateDir(fresh('notimes', (f) => { f['trips.json'] = '[{"id":"x","route":"A","direction":"down"}]'; }));
   assert.ok(noTimes.some((e) => e.includes('times')), 'times が無くても落ちない');
 } finally {
   rmSync(vtmp, { recursive: true, force: true });

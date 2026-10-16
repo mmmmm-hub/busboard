@@ -1,19 +1,19 @@
 [
  {
   "id": "A",
-  "name": "駅・大学線",
+  "name": "駅・営業所線",
   "color": "blue",
   "stops": {
-   "to_campus": [
+   "down": [
     "station",
     "town",
     "hospital",
-    "gate",
-    "main"
+    "park",
+    "depot"
    ],
-   "to_city": [
-    "main",
-    "gate",
+   "up": [
+    "depot",
+    "park",
     "hospital",
     "town",
     "station"

@@ -3,7 +3,7 @@
 時刻表のデータは `public/data/` の4つのJSONだけです(便だけは Excel/CSV からも作れます: [CSV_FORMAT.md](CSV_FORMAT.md))。コードは触りません。
 書き換えたら `npm run validate` で入力ミスを検査できます(`npm run build` や GitHub Actions でも自動で検査され、エラーがあると公開されません)。
 
-実例は `examples/sample-univ/`(汎用の小さなサンプル、7限まで)と `examples/chitose/`(実運用のビビバスのデータ、216便)にあります。
+実例は `examples/sample/`(汎用の小さなサンプル。時限は7つ)と `examples/chitose/`(千歳市の路線バスで実際に使っているビビバスのデータ、216便)にあります。
 
 ## site.json — サイトの設定
 
@@ -13,8 +13,8 @@
 | `subtitle` | ヘッダーの小さな補足 |
 | `notice` | フッターの注意書き(「非公式です」など) |
 | `footer` | フッターの最終行 |
-| `directions` | 方向の一覧。`id`、`label`(例: 行き)、`sub`(例: 大学へ)、`periodMode` |
-| `defaults` | 方向ごとの、最初に選ばれる乗車地・降車地(`{ "to_campus": { "from": "...", "to": "..." } }`) |
+| `directions` | 方向の一覧。`id`、`label`(例: 下り)、`sub`(例: 営業所方面)、`periodMode` |
+| `defaults` | 方向ごとの、最初に選ばれる乗車地・降車地(`{ "down": { "from": "...", "to": "..." } }`) |
 | `operators` | 運行会社。`{ "id": { "name": "北都", "color": "green" } }`。**運行会社が1社なら書かなくてよい**(便に `operator` が無ければ、画面にも列・バッジも出ない) |
 | `periods` | 時限。下記 |
 | `arrivalBufferMin` | 時限の開始・終了に持たせる余裕(分) |
@@ -24,7 +24,7 @@
 
 ### 時限(`periods`)
 
-大学以外では丸ごと書かなければ、時限の絞り込みは出ません。
+学校の時間割や、仕事のシフトなど、時間帯で便を探す必要がなければ、`periods` を丸ごと書かなくて構いません(時限の絞り込みは出ません)。
 
 ```json
 "periods": {
@@ -48,13 +48,13 @@
 
 ```json
 "calendar": {
-  "breaks": [{ "name": "夏季休業", "from": "2026-08-03", "to": "2026-09-25" }],
+  "breaks": [{ "name": "夏季の特別ダイヤ", "from": "2026-08-03", "to": "2026-09-25" }],
   "holidays": ["2026-11-03", "2026-11-23"]
 }
 ```
 
 - `saturdayAs`: 土曜の扱い。**省略すると土曜は日曜・祝日と同じダイヤ**(平日 / 休日の2区分)です。土曜だけ別ダイヤの路線は `"saturday"` にして、便の `days` に `saturday` を使います。
-- `breaks`: 長期休業の期間。便ごとに、この期間中の扱いを決められます(下記 `breaks`)。
+- `breaks`: 長期休業や、夏季・年末年始などの特別ダイヤの期間。便ごとに、この期間中の扱いを決められます(下記 `breaks`)。
 - `holidays`: 祝日。日曜と同じ扱いになります。
 
 ## stops.json — 停留所
@@ -62,7 +62,7 @@
 ```json
 [
   { "id": "station", "name": "駅前", "platforms": { "A": "3番" } },
-  { "id": "gate", "name": "大学正門", "shortName": "正門" }
+  { "id": "park", "name": "中央公園前", "shortName": "公園前" }
 ]
 ```
 
@@ -81,11 +81,11 @@
 [
   {
     "id": "A",
-    "name": "駅・大学線",
+    "name": "駅・営業所線",
     "color": "blue",
     "stops": {
-      "to_campus": ["station", "town", "hospital", "gate", "main"],
-      "to_city": ["main", "gate", "hospital", "town", "station"]
+      "down": ["station", "town", "hospital", "park", "depot"],
+      "up": ["depot", "park", "hospital", "town", "station"]
     }
   }
 ]
@@ -101,12 +101,12 @@
 {
   "id": "A-wd-up-01",
   "route": "A",
-  "direction": "to_campus",
+  "direction": "down",
   "days": "weekday",
   "breaks": "suspend",
   "operator": "hokuto",
   "from": "2026-10-01",
-  "times": { "station": "07:00", "town": "07:05", "hospital": "07:09", "gate": "07:15", "main": "07:18" }
+  "times": { "station": "07:00", "town": "07:05", "hospital": "07:09", "park": "07:15", "depot": "07:18" }
 }
 ```
 

@@ -8,7 +8,7 @@ export type BreaksBehavior = 'run' | 'suspend' | 'only';
 export interface Direction {
   id: string;
   label: string;
-  /** ボタンの補助表示(例: 「大学へ」) */
+  /** ボタンの補助表示(例: 「営業所方面」) */
   sub?: string;
   periodMode?: PeriodMode;
 }

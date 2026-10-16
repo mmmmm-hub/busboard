@@ -89,7 +89,7 @@ export function importCsv(csvDir: string, dataDir: string): ImportResult {
     if (!header) { errors.push(`${file}: 時刻の表がありません`); continue; }
 
     if (!meta.route) errors.push(`${at(0)}: #route の行がありません(例: #route,A)`);
-    if (!meta.direction) errors.push(`${at(0)}: #direction の行がありません(例: #direction,to_campus)`);
+    if (!meta.direction) errors.push(`${at(0)}: #direction の行がありません(例: #direction,down)`);
     if (!meta.route || !meta.direction) continue;
 
     const route = resolveRoute(meta.route);

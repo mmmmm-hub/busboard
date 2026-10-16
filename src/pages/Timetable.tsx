@@ -11,7 +11,7 @@ import type { DayType, Trip } from '../types';
 
 const DAY_LABEL: Record<DayType, string> = { weekday: '平日', saturday: '土曜', holiday: '土日祝' };
 
-// 選んだ種別(平日/土曜/日祝 × 授業期/休業期)に当てはまる、直近の実際の日付を探す
+// 選んだ種別(平日/土曜/日祝 × 通常期/休業期)に当てはまる、直近の実際の日付を探す
 function representativeDate(site: ReturnType<typeof useTimetable>['site'], day: DayType, inBreak: boolean): Date {
   const start = new Date();
   start.setHours(0, 0, 0, 0);
@@ -143,7 +143,7 @@ export default function TimetablePage() {
             <SegmentedToggle<'term' | 'break'>
               value={inBreak ? 'break' : 'term'}
               onChange={(v) => setInBreak(v === 'break')}
-              options={[{ value: 'term', label: '授業期' }, { value: 'break', label: '休業期' }]}
+              options={[{ value: 'term', label: '通常期' }, { value: 'break', label: '休業期' }]}
             />
           )}
         </div>

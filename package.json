@@ -14,7 +14,7 @@
     "validate": "tsx scripts/validate.ts",
     "import": "tsx scripts/import-csv.ts",
     "export-csv": "tsx scripts/export-csv.ts",
-    "validate:examples": "tsx scripts/validate.ts examples/chitose && tsx scripts/validate.ts examples/sample-univ",
+    "validate:examples": "tsx scripts/validate.ts examples/chitose && tsx scripts/validate.ts examples/sample",
     "test": "npm run validate:examples && tsx scripts/test.ts && tsx scripts/test-csv.ts",
     "lint": "tsc --noEmit"
   },
