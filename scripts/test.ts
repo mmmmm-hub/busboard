@@ -82,6 +82,11 @@ assert.ok(findTrips(sample, sSat, 'station', 'depot').length > 0, '土曜は既�
 assert.equal(findTrips(sample, sSat, 'station', 'depot').length, findTrips(sample, new Date(2026, 10, 22), 'station', 'depot').length);
 const indep: TimetableData = { ...sample, site: { ...sample.site, calendar: { ...sample.site.calendar, saturdayAs: 'saturday' } } };
 assert.equal(findTrips(indep, sSat, 'station', 'depot').length, 0, 'saturdayAs: saturday なら土曜は独立(休日便は走らない)');
+// 1日だけの便(from と until が同じ日): その日だけ走り、前日・翌日は走らない
+const oneDay: Trip = { id: 'event', route: 'A', direction: 'down', from: '2026-11-03', until: '2026-11-03', times: { station: '09:00', depot: '09:18' } };
+assert.equal(tripRuns(sample.site, oneDay, new Date(2026, 10, 3)), true);
+assert.equal(tripRuns(sample.site, oneDay, new Date(2026, 10, 2)), false);
+assert.equal(tripRuns(sample.site, oneDay, new Date(2026, 10, 4)), false);
 const nextDay = nextOperatingDay(sample, new Date(2026, 10, 22), 'station', 'depot', 'down');
 // 11/23(月)はサンプルの祝日なので、休日ダイヤの始発(09:00)
 assert.ok(nextDay && nextDay.date.getDate() === 23 && nextDay.hit.times.station === '09:00', '翌運行日の始発');
