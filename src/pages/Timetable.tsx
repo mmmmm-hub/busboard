@@ -11,7 +11,7 @@ import type { DayType, Trip } from '../types';
 
 const DAY_LABEL: Record<DayType, string> = { weekday: '平日', saturday: '土曜', holiday: '土日祝' };
 
-// 選んだ種別(平日/土曜/日祝 × 通常期/休業期)に当てはまる、直近の実際の日付を探す
+// 選んだ種別(平日/土曜/日祝 × 通常/休業期)に当てはまる、直近の実際の日付を探す
 function representativeDate(site: ReturnType<typeof useTimetable>['site'], day: DayType, inBreak: boolean): Date {
   const start = new Date();
   start.setHours(0, 0, 0, 0);
@@ -129,7 +129,24 @@ export default function TimetablePage() {
   return (
     <div className="bg-slate-50 min-h-screen pb-12">
       <div className="sticky top-16 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100 p-4 space-y-3">
-        <h2 className="text-lg font-semibold text-slate-900">時刻表</h2>
+        <div className="flex items-center justify-between gap-3">
+          <h2 className="text-lg font-semibold text-slate-900">時刻表</h2>
+          {/* 休業期間(特別ダイヤの期間)が site.json にあるときだけ、小さなスイッチを出す */}
+          {hasBreaks && (
+            <button
+              type="button"
+              role="switch"
+              aria-checked={inBreak}
+              onClick={() => setInBreak((v) => !v)}
+              className="flex items-center gap-2 min-h-11 pl-3 pr-1 bg-transparent border-none cursor-pointer select-none"
+            >
+              <span className="text-[13px] font-medium text-slate-700">休業期のダイヤ</span>
+              <span className={`relative inline-flex h-6 w-11 shrink-0 rounded-full transition-colors duration-200 ${inBreak ? 'bg-orange-700' : 'bg-slate-300'}`}>
+                <span className={`absolute top-0.5 left-0.5 h-5 w-5 rounded-full bg-white shadow-sm transition-transform duration-200 ${inBreak ? 'translate-x-5' : 'translate-x-0'}`} />
+              </span>
+            </button>
+          )}
+        </div>
         <div className="space-y-2">
           {site.directions.length > 1 && (
             <SegmentedToggle<string>
@@ -139,13 +156,6 @@ export default function TimetablePage() {
             />
           )}
           <SegmentedToggle<DayType> value={day} onChange={setDay} options={dayOptions} />
-          {hasBreaks && (
-            <SegmentedToggle<'term' | 'break'>
-              value={inBreak ? 'break' : 'term'}
-              onChange={(v) => setInBreak(v === 'break')}
-              options={[{ value: 'term', label: '通常期' }, { value: 'break', label: '休業期' }]}
-            />
-          )}
         </div>
       </div>
 

@@ -377,11 +377,10 @@
   }
  },
  {
-  "id": "A_down_weekday_suspend-01",
+  "id": "A_down_weekday-21",
   "route": "A",
   "direction": "down",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "station": "07:20",
    "town": "07:25",
@@ -391,11 +390,10 @@
   }
  },
  {
-  "id": "A_down_weekday_suspend-02",
+  "id": "A_down_weekday-22",
   "route": "A",
   "direction": "down",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "station": "08:00",
    "town": "08:05",
@@ -405,11 +403,10 @@
   }
  },
  {
-  "id": "A_down_weekday_suspend-03",
+  "id": "A_down_weekday-23",
   "route": "A",
   "direction": "down",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "station": "08:40",
    "town": "08:45",
@@ -419,11 +416,10 @@
   }
  },
  {
-  "id": "A_down_weekday_suspend-04",
+  "id": "A_down_weekday-24",
   "route": "A",
   "direction": "down",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "station": "09:20",
    "town": "09:25",
@@ -433,11 +429,10 @@
   }
  },
  {
-  "id": "A_down_weekday_suspend-05",
+  "id": "A_down_weekday-25",
   "route": "A",
   "direction": "down",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "station": "10:00",
    "town": "10:05",
@@ -447,11 +442,10 @@
   }
  },
  {
-  "id": "A_down_weekday_suspend-06",
+  "id": "A_down_weekday-26",
   "route": "A",
   "direction": "down",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "station": "10:40",
    "town": "10:45",
@@ -461,11 +455,10 @@
   }
  },
  {
-  "id": "A_down_weekday_suspend-07",
+  "id": "A_down_weekday-27",
   "route": "A",
   "direction": "down",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "station": "11:20",
    "town": "11:25",
@@ -475,11 +468,10 @@
   }
  },
  {
-  "id": "A_down_weekday_suspend-08",
+  "id": "A_down_weekday-28",
   "route": "A",
   "direction": "down",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "station": "12:00",
    "town": "12:05",
@@ -489,11 +481,10 @@
   }
  },
  {
-  "id": "A_down_weekday_suspend-09",
+  "id": "A_down_weekday-29",
   "route": "A",
   "direction": "down",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "station": "12:40",
    "town": "12:45",
@@ -503,11 +494,10 @@
   }
  },
  {
-  "id": "A_down_weekday_suspend-10",
+  "id": "A_down_weekday-30",
   "route": "A",
   "direction": "down",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "station": "13:20",
    "town": "13:25",
@@ -517,11 +507,10 @@
   }
  },
  {
-  "id": "A_down_weekday_suspend-11",
+  "id": "A_down_weekday-31",
   "route": "A",
   "direction": "down",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "station": "14:00",
    "town": "14:05",
@@ -531,11 +520,10 @@
   }
  },
  {
-  "id": "A_down_weekday_suspend-12",
+  "id": "A_down_weekday-32",
   "route": "A",
   "direction": "down",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "station": "14:40",
    "town": "14:45",
@@ -545,11 +533,10 @@
   }
  },
  {
-  "id": "A_down_weekday_suspend-13",
+  "id": "A_down_weekday-33",
   "route": "A",
   "direction": "down",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "station": "15:20",
    "town": "15:25",
@@ -559,11 +546,10 @@
   }
  },
  {
-  "id": "A_down_weekday_suspend-14",
+  "id": "A_down_weekday-34",
   "route": "A",
   "direction": "down",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "station": "16:00",
    "town": "16:05",
@@ -573,11 +559,10 @@
   }
  },
  {
-  "id": "A_down_weekday_suspend-15",
+  "id": "A_down_weekday-35",
   "route": "A",
   "direction": "down",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "station": "16:40",
    "town": "16:45",
@@ -587,11 +572,10 @@
   }
  },
  {
-  "id": "A_down_weekday_suspend-16",
+  "id": "A_down_weekday-36",
   "route": "A",
   "direction": "down",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "station": "17:20",
    "town": "17:25",
@@ -601,11 +585,10 @@
   }
  },
  {
-  "id": "A_down_weekday_suspend-17",
+  "id": "A_down_weekday-37",
   "route": "A",
   "direction": "down",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "station": "18:00",
    "town": "18:05",
@@ -615,11 +598,10 @@
   }
  },
  {
-  "id": "A_down_weekday_suspend-18",
+  "id": "A_down_weekday-38",
   "route": "A",
   "direction": "down",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "station": "18:40",
    "town": "18:45",
@@ -629,11 +611,10 @@
   }
  },
  {
-  "id": "A_down_weekday_suspend-19",
+  "id": "A_down_weekday-39",
   "route": "A",
   "direction": "down",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "station": "19:20",
    "town": "19:25",
@@ -1033,11 +1014,10 @@
   }
  },
  {
-  "id": "A_up_weekday_suspend-01",
+  "id": "A_up_weekday-22",
   "route": "A",
   "direction": "up",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "depot": "08:30",
    "park": "08:33",
@@ -1047,11 +1027,10 @@
   }
  },
  {
-  "id": "A_up_weekday_suspend-02",
+  "id": "A_up_weekday-23",
   "route": "A",
   "direction": "up",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "depot": "09:10",
    "park": "09:13",
@@ -1061,11 +1040,10 @@
   }
  },
  {
-  "id": "A_up_weekday_suspend-03",
+  "id": "A_up_weekday-24",
   "route": "A",
   "direction": "up",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "depot": "09:50",
    "park": "09:53",
@@ -1075,11 +1053,10 @@
   }
  },
  {
-  "id": "A_up_weekday_suspend-04",
+  "id": "A_up_weekday-25",
   "route": "A",
   "direction": "up",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "depot": "10:30",
    "park": "10:33",
@@ -1089,11 +1066,10 @@
   }
  },
  {
-  "id": "A_up_weekday_suspend-05",
+  "id": "A_up_weekday-26",
   "route": "A",
   "direction": "up",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "depot": "11:10",
    "park": "11:13",
@@ -1103,11 +1079,10 @@
   }
  },
  {
-  "id": "A_up_weekday_suspend-06",
+  "id": "A_up_weekday-27",
   "route": "A",
   "direction": "up",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "depot": "11:50",
    "park": "11:53",
@@ -1117,11 +1092,10 @@
   }
  },
  {
-  "id": "A_up_weekday_suspend-07",
+  "id": "A_up_weekday-28",
   "route": "A",
   "direction": "up",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "depot": "12:30",
    "park": "12:33",
@@ -1131,11 +1105,10 @@
   }
  },
  {
-  "id": "A_up_weekday_suspend-08",
+  "id": "A_up_weekday-29",
   "route": "A",
   "direction": "up",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "depot": "13:10",
    "park": "13:13",
@@ -1145,11 +1118,10 @@
   }
  },
  {
-  "id": "A_up_weekday_suspend-09",
+  "id": "A_up_weekday-30",
   "route": "A",
   "direction": "up",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "depot": "13:50",
    "park": "13:53",
@@ -1159,11 +1131,10 @@
   }
  },
  {
-  "id": "A_up_weekday_suspend-10",
+  "id": "A_up_weekday-31",
   "route": "A",
   "direction": "up",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "depot": "14:30",
    "park": "14:33",
@@ -1173,11 +1144,10 @@
   }
  },
  {
-  "id": "A_up_weekday_suspend-11",
+  "id": "A_up_weekday-32",
   "route": "A",
   "direction": "up",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "depot": "15:10",
    "park": "15:13",
@@ -1187,11 +1157,10 @@
   }
  },
  {
-  "id": "A_up_weekday_suspend-12",
+  "id": "A_up_weekday-33",
   "route": "A",
   "direction": "up",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "depot": "15:50",
    "park": "15:53",
@@ -1201,11 +1170,10 @@
   }
  },
  {
-  "id": "A_up_weekday_suspend-13",
+  "id": "A_up_weekday-34",
   "route": "A",
   "direction": "up",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "depot": "16:30",
    "park": "16:33",
@@ -1215,11 +1183,10 @@
   }
  },
  {
-  "id": "A_up_weekday_suspend-14",
+  "id": "A_up_weekday-35",
   "route": "A",
   "direction": "up",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "depot": "17:10",
    "park": "17:13",
@@ -1229,11 +1196,10 @@
   }
  },
  {
-  "id": "A_up_weekday_suspend-15",
+  "id": "A_up_weekday-36",
   "route": "A",
   "direction": "up",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "depot": "17:50",
    "park": "17:53",
@@ -1243,11 +1209,10 @@
   }
  },
  {
-  "id": "A_up_weekday_suspend-16",
+  "id": "A_up_weekday-37",
   "route": "A",
   "direction": "up",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "depot": "18:30",
    "park": "18:33",
@@ -1257,11 +1222,10 @@
   }
  },
  {
-  "id": "A_up_weekday_suspend-17",
+  "id": "A_up_weekday-38",
   "route": "A",
   "direction": "up",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "depot": "19:10",
    "park": "19:13",
@@ -1271,11 +1235,10 @@
   }
  },
  {
-  "id": "A_up_weekday_suspend-18",
+  "id": "A_up_weekday-39",
   "route": "A",
   "direction": "up",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "depot": "19:50",
    "park": "19:53",
@@ -1285,11 +1248,10 @@
   }
  },
  {
-  "id": "A_up_weekday_suspend-19",
+  "id": "A_up_weekday-40",
   "route": "A",
   "direction": "up",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "depot": "20:30",
    "park": "20:33",
@@ -1299,11 +1261,10 @@
   }
  },
  {
-  "id": "A_up_weekday_suspend-20",
+  "id": "A_up_weekday-41",
   "route": "A",
   "direction": "up",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "depot": "21:10",
    "park": "21:13",
@@ -1313,11 +1274,10 @@
   }
  },
  {
-  "id": "A_up_weekday_suspend-21",
+  "id": "A_up_weekday-42",
   "route": "A",
   "direction": "up",
   "days": "weekday",
-  "breaks": "suspend",
   "times": {
    "depot": "21:50",
    "park": "21:53",
