@@ -1,0 +1,51 @@
+name: 不具合の報告
+description: 画面の表示がおかしい、検査や取り込みでエラーになるなど
+title: "[不具合] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ご報告ありがとうございます。**個人で運営しているため、お返事・修正には時間がかかることがあります。**
+        使い方の質問は、「質問・使い方」から送ってください。
+  - type: textarea
+    id: what
+    attributes:
+      label: 何が起きましたか?
+      description: 画面がおかしいときは、スクリーンショットを貼ってもらえると助かります。
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現のしかた
+      description: どう操作すると起きますか? 日付や、選んだ停留所も書いてください。
+      placeholder: |
+        1. ホームを開く
+        2. 乗車地を「…」にする
+        3. 日付を「…」にする
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 本来はどうなってほしいですか?
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: 端末とブラウザ
+      description: 例) iPhone 15 の Safari / Windows の Chrome
+    validations:
+      required: false
+  - type: textarea
+    id: data
+    attributes:
+      label: データ(あれば)
+      description: |
+        `npm run validate` のエラーの文章や、関係する `site.json` などの一部を貼ってください。
+        **実在のバスのデータは、公開してよいものだけ**を貼ってください。
+      render: text
+    validations:
+      required: false

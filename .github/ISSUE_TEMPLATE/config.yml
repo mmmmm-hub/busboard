@@ -1,0 +1,2 @@
+# 白紙のIssueは使わず、下の2つのどちらかから選んでもらう
+blank_issues_enabled: false

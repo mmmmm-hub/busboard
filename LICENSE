@@ -19,3 +19,25 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+----------------------------------------------------------------------------
+
+Exclusions / 対象外
+
+The MIT License above does NOT apply to the following. They are not licensed
+under the MIT License, and no rights to them are granted by this file.
+
+  1. The timetable data under examples/chitose/ (stop names, route names,
+     times and other data about real bus services). It is a copy of data
+     compiled from publicly released materials, and is unofficial and not
+     necessarily current. Check the terms of the original sources before
+     reusing it.
+  2. The name and logo of "ビビバス" (Bibibus).
+
+上のMITライセンスは、次のものには適用されません。このファイルによる利用の許諾も
+ありません。
+
+  1. examples/chitose/ の時刻表データ(停留所名・路線名・時刻など、実在のバスに
+     関するデータ)。公表された資料を元に作った控えで、非公式であり、最新とは
+     限りません。再利用するときは、元の資料の利用条件を確認してください。
+  2. 「ビビバス」の名称とロゴ。

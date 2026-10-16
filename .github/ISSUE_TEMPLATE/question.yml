@@ -1,0 +1,36 @@
+name: 質問・使い方
+description: 使い方が分からない、うまく動かないときはこちら
+title: "[質問] "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ご覧いただきありがとうございます。**個人で運営しているため、お返事には時間がかかることがあり、サポートは保証できません。**
+        先に [README](../blob/main/README.md) と [docs](../tree/main/docs)(データの書き方、CSVの書き方)を見てください。
+        自分のバスのデータの内容そのもの(時刻が合っているかなど)は、お答えできません。
+  - type: textarea
+    id: want
+    attributes:
+      label: やりたいこと
+      description: 何をしようとしていますか?
+      placeholder: 例) 土曜だけ別のダイヤにしたい
+    validations:
+      required: true
+  - type: textarea
+    id: tried
+    attributes:
+      label: ためしたこと・困っていること
+      description: どこまでやって、どこで止まりましたか? エラーが出たときは、その文章をそのまま貼ってください。
+    validations:
+      required: true
+  - type: dropdown
+    id: how
+    attributes:
+      label: どちらの方法で作っていますか?
+      options:
+        - ブラウザだけ(GitHub の画面で編集)
+        - 自分のパソコン(CSV の取り込みなど)
+        - まだ決めていない
+    validations:
+      required: false
