@@ -1,6 +1,6 @@
 # データ形式
 
-時刻表のデータは `public/data/` の4つのJSONだけです(便だけは Excel/CSV からも作れます: [CSV_FORMAT.md](CSV_FORMAT.md))。コードは触りません。
+時刻表のデータは `public/data/` の4つのJSONだけです(ほかに、運賃・乗り方などの案内を書く `about.md` を、あれば置けます。書き方は README の「案内ページ」)(便だけは Excel/CSV からも作れます: [CSV_FORMAT.md](CSV_FORMAT.md))。コードは触りません。
 書き換えたら `npm run validate` で入力ミスを検査できます(`npm run build` や GitHub Actions でも自動で検査され、エラーがあると公開されません)。
 
 実例は `examples/sample/`(汎用の小さなサンプル。時限は7つ)と `examples/chitose/`(千歳市の路線バスで実際に使っているビビバスのデータ、216便)にあります。

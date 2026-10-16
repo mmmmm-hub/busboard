@@ -4,6 +4,7 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import TimetablePage from './pages/Timetable';
 import NewsPage from './pages/News';
+import AboutPage from './pages/About';
 import { DataProvider } from './lib/data';
 
 function ScrollToTop() {
@@ -26,6 +27,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/timetable" element={<TimetablePage />} />
             <Route path="/news" element={<NewsPage />} />
+            <Route path="/about" element={<AboutPage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Route>
         </Routes>

@@ -6,7 +6,7 @@ import { STORAGE_KEYS, readString } from '../lib/storage';
 
 // アプリの外枠: 上部ヘッダー + スマホ幅の本文 + 下部ナビ
 export default function Layout() {
-  const { site } = useTimetable();
+  const { site, about } = useTimetable();
   const { pathname } = useLocation();
   const notices = site.notices ?? [];
   const latest = notices.reduce((m, n) => (n.date > m ? n.date : m), '');
@@ -35,7 +35,7 @@ export default function Layout() {
         </footer>
       </main>
 
-      <BottomNav showNews={notices.length > 0} hasNewNews={hasNew} />
+      <BottomNav showNews={notices.length > 0} hasNewNews={hasNew} showAbout={about !== null} />
     </div>
   );
 }

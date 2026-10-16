@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { availableStops, carryoverHits, clockNote, connects, directionFor, filterByPeriod, filterNow, findTrips, nextOperatingDay, tripRuns } from '../src/lib/logic';
+import { parseMarkdown, safeHref } from '../src/lib/markdown';
 import type { Route, Site, Stop, TimetableData, Trip } from '../src/types';
 
 const dir = resolve(process.argv[2] ?? 'examples/chitose');
@@ -130,3 +131,18 @@ try {
   rmSync(vtmp, { recursive: true, force: true });
 }
 console.log('validate ok');
+
+// --- 案内ページ(about.md)の Markdown: 決まった書き方だけを読み、HTMLやあぶない書き方は文字として出す ---
+const md = parseMarkdown(['# 見出し', '', '本文 **太字** と [リンク](https://example.com/)', '2行目', '', '- 項目A', '- 項目B', '', '1. 手順1', '2. 手順2', '', '---'].join('\n'));
+assert.deepEqual(md.map((b) => b.type), ['heading', 'paragraph', 'ul', 'ol', 'hr']);
+const para = md[1];
+assert.ok(para.type === 'paragraph' && para.lines.length === 2, '行の改行を残す');
+assert.ok(para.type === 'paragraph' && para.lines[0].some((i) => i.type === 'bold') && para.lines[0].some((i) => i.type === 'link'));
+assert.equal(safeHref('https://example.com'), 'https://example.com');
+assert.equal(safeHref('tel:0123-45-6789'), 'tel:0123-45-6789');
+assert.equal(safeHref('javascript:alert(1)'), null);
+assert.equal(safeHref('data:text/html,x'), null);
+const evil = parseMarkdown('[押す](javascript:alert(1)) <script>alert(1)</script>');
+assert.ok(evil[0].type === 'paragraph' && !evil[0].lines[0].some((i) => i.type === 'link'), 'あぶないリンクはリンクにしない');
+assert.ok(evil[0].type === 'paragraph' && evil[0].lines[0].some((i) => i.type === 'text' && i.text.includes('<script>')), 'HTMLは文字として残る(動かさない)');
+console.log('markdown ok');

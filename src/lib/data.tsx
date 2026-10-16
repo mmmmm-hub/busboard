@@ -1,19 +1,38 @@
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
 import type { Route, Site, Stop, TimetableData, Trip } from '../types';
 
-type Loaded = TimetableData & { stopsById: Map<string, Stop> };
+type Loaded = TimetableData & {
+  stopsById: Map<string, Stop>;
+  /** ご利用案内(public/data/about.md の文章)。ファイルが無ければ null */
+  about: string | null;
+};
 
 const Ctx = createContext<Loaded | null>(null);
 
 // base が './' なので、どのURL配下に置いても data/ を相対で読める
+const dataUrl = (file: string) => `${import.meta.env.BASE_URL}data/${file}`;
+
 const getJson = async <T,>(file: string): Promise<T> => {
-  const res = await fetch(`${import.meta.env.BASE_URL}data/${file}`, { cache: 'no-cache' });
+  const res = await fetch(dataUrl(file), { cache: 'no-cache' });
   if (!res.ok) throw new Error(`data/${file} を読み込めませんでした (${res.status})`);
   return res.json() as Promise<T>;
 };
 
+// 無くてもよい文章ファイル。見つからなければ null(開発サーバーは、無いファイルに
+// index.html を返すことがあるので、HTML が返ってきたときも「無い」とみなす)
+const getOptionalText = async (file: string): Promise<string | null> => {
+  try {
+    const res = await fetch(dataUrl(file), { cache: 'no-cache' });
+    if (!res.ok || /html/i.test(res.headers.get('content-type') ?? '')) return null;
+    const text = await res.text();
+    return text.trim() ? text : null;
+  } catch {
+    return null;
+  }
+};
+
 export function DataProvider({ children }: { children: ReactNode }) {
-  const [data, setData] = useState<TimetableData | null>(null);
+  const [data, setData] = useState<(TimetableData & { about: string | null }) | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -22,8 +41,9 @@ export function DataProvider({ children }: { children: ReactNode }) {
       getJson<Stop[]>('stops.json'),
       getJson<Route[]>('routes.json'),
       getJson<Trip[]>('trips.json'),
+      getOptionalText('about.md'),
     ])
-      .then(([site, stops, routes, trips]) => {
+      .then(([site, stops, routes, trips, about]) => {
         // 画面が真っ白にならないよう、最低限そろっているかを確かめる(細かい検査は npm run validate)
         const missing = [
           !site?.directions?.length && 'site.json の directions(方向の一覧)',
@@ -33,7 +53,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
         ].filter(Boolean);
         if (missing.length) throw new Error(`${missing.join('、')}がありません。npm run validate で詳しく確認できます`);
         document.title = site.name;
-        setData({ site, stops, routes, trips });
+        setData({ site, stops, routes, trips, about });
       })
       .catch((e: Error) => setError(e.message));
   }, []);
