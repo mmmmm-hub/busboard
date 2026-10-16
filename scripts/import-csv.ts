@@ -11,6 +11,7 @@ try {
   console.log(`取り込みました: CSV ${r.files}ファイル → ${r.trips}便`);
   if (r.newRoutes.length) console.log(`  新しい路線: ${r.newRoutes.join('、')}(routes.json で名前と色を直せます)`);
   if (r.newStops.length) console.log(`  新しい停留所: ${r.newStops.join('、')}`);
+  if (r.unusedStops.length) console.log(`  使われていない停留所: ${r.unusedStops.join('、')}(stops.json から消して構いません)`);
   const problems = validateDir(dataDir);
   if (problems.length) {
     console.error('\n取り込みはできましたが、データに問題があります:\n' + problems.map((p) => '  × ' + p).join('\n'));

@@ -73,6 +73,17 @@ try {
   writeFileSync(join(badDir, 'b.csv'), lines('#route,A', '停留所,1', '駅前,7:00'), 'utf8');
   assert.throws(() => importCsv(badDir, dataDir), (e) => e instanceof ImportError && e.message.includes('#direction'));
 
+  // 路線を丸ごと入れ替えると、使われなくなった古い停留所を知らせる
+  const swapDir = join(tmp, 'swap');
+  mkdirSync(swapDir);
+  const swapData = join(tmp, 'swapdata');
+  mkdirSync(swapData);
+  for (const f of ['site.json', 'stops.json']) cpSync(join(SAMPLE, f), join(swapData, f));
+  writeFileSync(join(swapData, 'routes.json'), '[]', 'utf8');
+  writeFileSync(join(swapDir, 'z.csv'), lines('#route,Z', '#direction,down', '停留所,1', '甲,7:00', '乙,7:10'), 'utf8');
+  const sw = importCsv(swapDir, swapData);
+  assert.equal(sw.unusedStops.length, 5, '古い5停留所はどの路線にも出てこない');
+
   // 雛形(templates/template.csv)は、そのまま取り込める。説明用の #memo の行は読み取らない
   const tplDir = join(tmp, 'tpl');
   mkdirSync(tplDir);

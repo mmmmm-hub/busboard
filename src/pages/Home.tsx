@@ -44,7 +44,12 @@ export default function Home() {
     const savedDir = readString(STORAGE_KEYS.direction);
     const dir0 = site.directions.some((d) => d.id === savedDir) ? savedDir! : firstDir;
     const choices = availableStops(data, new Date()).map((s) => s.id);
-    const exists = (id: string | null | undefined): id is string => !!id && !!stopsById.get(id) && !stopsById.get(id)!.hidden;
+    // 便が1つも停まらない停留所(古いデータの名残など)は、前回の選択や既定値でも使わない
+    const used = new Set(data.trips.flatMap((t) => Object.keys(t.times)));
+    const exists = (id: string | null | undefined): id is string => {
+      const s = id ? stopsById.get(id) : undefined;
+      return !!s && !s.hidden && (used.has(s.id) || (s.alias ?? []).some((a) => used.has(a)));
+    };
     const def = site.defaults?.[dir0];
     let from = [readString(STORAGE_KEYS.stopFrom), def?.from, choices[0]].find(exists) ?? data.stops[0].id;
     let to = [readString(STORAGE_KEYS.stopTo), def?.to, choices[choices.length - 1]].find((id) => exists(id) && id !== from);

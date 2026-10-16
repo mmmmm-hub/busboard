@@ -78,6 +78,16 @@ export function validateDir(dirPath: string): string[] {
   for (const [d, def] of Object.entries(site.defaults ?? {})) {
     if (!dirIds.has(d)) err(`site.json: defaults の方向 "${d}" が directions にありません`);
     for (const id of [def.from, def.to]) if (!stopIds.has(id)) err(`site.json: defaults.${d} の停留所 "${id}" が stops.json にありません`);
+    const linked = trips.some((t) => {
+      if (t.direction !== d) return false;
+      const order = routes.find((r) => r.id === t.route)?.stops?.[d] ?? [];
+      const resolve = (id: string) => [id, ...(stops.find((s) => s.id === id)?.alias ?? [])].find((x) => t.times?.[x] !== undefined);
+      const f = resolve(def.from), to = resolve(def.to);
+      return !!f && !!to && order.indexOf(f) >= 0 && order.indexOf(f) < order.indexOf(to);
+    });
+    if (stopIds.has(def.from) && stopIds.has(def.to) && !linked) {
+      err(`site.json: defaults.${d}(${def.from} → ${def.to})を結ぶ便がありません。最初に選ばれる乗車地・降車地を、実際に便がある停留所に書き換えてください`);
+    }
   }
   for (const [d, ids] of Object.entries(site.timetableColumns ?? {})) {
     for (const s of ids) if (!stopIds.has(s)) err(`site.json: timetableColumns.${d} に未定義の停留所 "${s}"`);

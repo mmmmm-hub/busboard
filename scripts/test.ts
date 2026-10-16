@@ -111,6 +111,12 @@ try {
   assert.ok(broken.length === 1 && broken[0].includes('site.json') && broken[0].includes('JSONの書き方'), '壊れたJSONは日本語で');
   const noDir = validateDir(fresh('nodir', (f) => { f['site.json'] = JSON.stringify({ name: 'x' }); }));
   assert.ok(noDir.some((e) => e.includes('directions')), '必須項目の欠けで落ちない');
+  const unreachable = validateDir(fresh('defaults', (f) => {
+    const site = JSON.parse(f['site.json']);
+    site.defaults.down = { from: 'depot', to: 'station' }; // 下りの向きでは営業所前→駅前の便は無い
+    f['site.json'] = JSON.stringify(site);
+  }));
+  assert.ok(unreachable.some((e) => e.includes('defaults.down') && e.includes('結ぶ便がありません')), '既定の区間に便が無いことを伝える');
   const missing = validateDir(join(vtmp, 'nothing'));
   assert.ok(missing.some((e) => e.includes('見つかりません')));
   const noTimes = validateDir(fresh('notimes', (f) => { f['trips.json'] = '[{"id":"x","route":"A","direction":"down"}]'; }));

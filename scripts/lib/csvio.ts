@@ -26,6 +26,8 @@ export interface ImportResult {
   trips: number;
   newStops: string[];
   newRoutes: string[];
+  /** どの路線にも出てこない停留所(古いデータの名残。stops.json から消してよい) */
+  unusedStops: string[];
 }
 
 /** timetable-csv/*.csv → stops.json / routes.json / trips.json(site.json は変更しない) */
@@ -166,12 +168,22 @@ export function importCsv(csvDir: string, dataDir: string): ImportResult {
     route.stops[dir] = merged;
   }
 
+  // CSV に無い(便が1つも無い)路線・方向の停留所リストは、古いデータの名残なので外す
+  for (const r of routes) {
+    for (const d of Object.keys(r.stops)) if (!orders.has(key(r.id, d))) delete r.stops[d];
+  }
+
   if (errors.length) throw new ImportError(errors);
 
   writeJson(join(dataDir, 'stops.json'), stops);
   writeJson(join(dataDir, 'routes.json'), routes);
   writeJson(join(dataDir, 'trips.json'), trips);
-  return { files: files.length, trips: trips.length, newStops, newRoutes };
+  const inRoutes = new Set(routes.flatMap((r) => Object.values(r.stops).flat()));
+  const aliased = new Set(stops.flatMap((s) => s.alias ?? []));
+  const unusedStops = stops
+    .filter((s) => !inRoutes.has(s.id) && !s.alias?.some((a) => inRoutes.has(a)) && !(s.hidden && aliased.has(s.id)))
+    .map((s) => s.name);
+  return { files: files.length, trips: trips.length, newStops, newRoutes, unusedStops };
 }
 
 const key = (route: string, dir: string) => `${route}\u0000${dir}`;
